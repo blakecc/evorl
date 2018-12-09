@@ -22,12 +22,12 @@ error_time_limit_secs = 300
 
 # Path variables
 
-user_path = '/Users/blakecuningham/'
+# user_path = '/Users/blakecuningham/'
 
-EDEN_dir = "../../EDEN/test_models/"
+# EDEN_dir = "../../EDEN/test_models/"
 
-
-model_list = "list_pop_2018114-N-3.json"
+log_directory = 'output/'
+model_list = "list_pop_2018127-N-1-G-0.json"
 
 # Functions
 
@@ -76,13 +76,13 @@ def best_running_reward(log_directory):
     # alpha of 0.01 is the same as the original Karpathy metric - weights the new score as 1% towards the MA
     return round(reward_df["ep_reward"].ewm(alpha = 0.01).mean()[50:].max(), 2)
 
-def run_experiment_chromosome_mod(model_for_experiment):
+def run_experiment_chromosome_mod(model_for_experiment, log_directory_main):
 
     model_name_for_directory = model_for_experiment[0].replace('.p','').replace('.','')
 
     ## set log directory
 
-    log_directory_main = user_path + 'Documents/temp_RL_output/'
+    # log_directory_main = user_path + 'Documents/temp_RL_output/'
     log_directory = log_directory_main + model_name_for_directory
 
     ## set model directory
@@ -152,7 +152,7 @@ def run_experiment_chromosome_mod(model_for_experiment):
 
 # Read in list of models (generation 1)
 
-model_list_dir = EDEN_dir + "fixed_params/" + model_list
+model_list_dir = "models/" + model_list
 
 with open(model_list_dir) as json_data:
     model_list_data = json.load(json_data)
@@ -161,7 +161,7 @@ with open(model_list_dir) as json_data:
 
 # Normal
 for mod in model_list_data:
-    run_experiment_chromosome_mod(mod)
+    run_experiment_chromosome_mod(mod, log_directory)
 
 
 # Evaluate and create Create new generation

@@ -339,7 +339,7 @@ def generate_learn_rate():
     # elif (choice == 3):
     #     return round((random.random() / 1e5 + 1e-6), 6)
 
-    return random.lognormvariate(0, 1) / 1e4
+    return round(random.lognormvariate(0, 1) / 1e4, 6)
 
 def load_population_json(pop_list_path):
 

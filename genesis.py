@@ -22,7 +22,8 @@ seed_value = 7
 # ---------------------------------------------------------------------------
 # ---------------------------------------------------------------------------
 population_list = []
-file_path = '/Users/blakecuningham/Dropbox/MScDataScience/Thesis/EDEN/test_models/fixed_params'
+# file_path = '/Users/blakecuningham/Dropbox/MScDataScience/Thesis/EDEN/test_models/fixed_params'
+file_path = "models/"
 
 chromo = generate_openai_chromosome(4)
 
@@ -66,7 +67,7 @@ for run in range(first_generation_size):
 list_file_name = ('list_pop_' + str(dt.date.today().year) +
                     str(dt.date.today().month) +
                     str(dt.date.today().day) +
-                    '-N-' + str(run_attempt) + '.json')
+                    '-N-' + str(run_attempt) + '-G-0.json')
 
 with open(file_path + list_file_name, 'w') as outfile:
     json.dump(population_list, outfile)
