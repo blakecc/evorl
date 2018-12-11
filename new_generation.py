@@ -24,12 +24,12 @@ import argparse
 # os.chdir('/Users/blakecuningham/Dropbox/MScDataScience/Thesis/EDEN')
 
 import sys
-sys.path.append('/Users/blakecuningham/Dropbox/MScDataScience/Thesis/EDEN')
+# sys.path.append('/Users/blakecuningham/Dropbox/MScDataScience/Thesis/EDEN')
 
 from evolution_helpers import *
 
 
-print(new_generation_main('list_pop_20181028-N-1.json', 2))
+print(new_generation_main('list_pop_2018127-N-1-G-0.json', 2))
 
 
 #

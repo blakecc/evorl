@@ -6,6 +6,25 @@ from tensorboard.backend.event_processing import event_accumulator as ea
 import subprocess
 import time
 import numpy as np
+import sys, traceback
+
+# Import to run new gen
+from collections import OrderedDict
+from tabulate import tabulate
+from pandas import ExcelWriter
+import random
+import math
+
+import pprint as pprint
+
+from keras.models import Sequential
+from keras.layers import Dense, Dropout, Embedding, Flatten
+from keras.layers import Conv1D, Conv2D, MaxPooling2D, MaxPooling1D
+
+import copy
+import argparse
+
+from evolution_helpers import *
 
 # import re
 
@@ -14,11 +33,12 @@ import numpy as np
 enforce_step_limit = True
 enforce_time_limit = True
 
-experiment_time_limit_secs = 3600
+experiment_time_limit_secs = 1800
 experiment_step_limit = 16000000
 
 error_time_limit_secs = 300
 
+total_num_generations = 3
 
 # Path variables
 
@@ -27,7 +47,7 @@ error_time_limit_secs = 300
 # EDEN_dir = "../../EDEN/test_models/"
 
 log_directory = 'output/'
-model_list = "list_pop_2018127-N-1-G-0.json"
+model_list = 'list_pop_20181211-N-1-G-0.json'
 
 # Functions
 
@@ -35,8 +55,8 @@ def current_running_reward(log_directory):
 
     # user_path = '/Users/blakecuningham/'
     train0_directory = log_directory + '/train_0'
-    train0_directory = train0_directory.replace('~/','')
-    full_train0log_directory = user_path + train0_directory
+    # train0_directory = train0_directory.replace('~/','')
+    # full_train0log_directory = user_path + train0_directory
     full_train0log_directory = train0_directory
 
     for file in os.listdir(full_train0log_directory):
@@ -87,7 +107,7 @@ def run_experiment_chromosome_mod(model_for_experiment, log_directory_main):
 
     ## set model directory
 
-    model_path = EDEN_dir + model_for_experiment[0]
+    model_path = "models/" + model_for_experiment[0]
 
     ## begin experiment
 
@@ -105,6 +125,9 @@ def run_experiment_chromosome_mod(model_for_experiment, log_directory_main):
 
     end_experiment = False
     start_time = time.time()
+
+    # Add in 5 minute initial delay to ensure everything settles down
+    time.sleep(300)
 
     while not end_experiment:
         time.sleep(60)
@@ -140,16 +163,44 @@ def run_experiment_chromosome_mod(model_for_experiment, log_directory_main):
                 end_experiment = True
                 print("Error time limit reached")
             else:
+                # e = sys.exc_info()[0]
                 print("Potential time out - sleeping for 1 min")
+                print("\nERROR DETAILS:\n")
+                # print("Type:\n")
+                # print(sys.exc_info()[0])
+                # print("\nValue:\n")
+                # print(sys.exc_info()[1])
+                # print("\nTraceback:\n")
+                # print(sys.exc_info()[2])
+                # print("\n")
+                traceback.print_exc(file=sys.stdout)
                 time.sleep(60)
     # Kill experiment when conditions satisfied
 
     subprocess.call(['tmux','kill-session', '-t', 'a3c'])
-    time.sleep(10)
+    time.sleep(30)
 
+def create_run_new_gen(prev_gen_list, this_gen_num):
+
+    # Evaluate and create Create new generation
+
+    this_generation_list = new_generation_main(prev_gen_list, this_gen_num)
+
+    # Run new generation for model in new generation
+
+    model_list_dir = "models/" + this_generation_list
+
+    with open(model_list_dir) as json_data:
+        model_list_data = json.load(json_data)
+
+    for mod in model_list_data:
+        run_experiment_chromosome_mod(mod, log_directory)
+
+    return this_generation_list
 
 # current_running_reward(log_directory)[0]
 
+## Run first generation
 # Read in list of models (generation 1)
 
 model_list_dir = "models/" + model_list
@@ -164,12 +215,10 @@ for mod in model_list_data:
     run_experiment_chromosome_mod(mod, log_directory)
 
 
-# Evaluate and create Create new generation
+## Run subsequent generations
 
-# Run new generation for model in new generation
-
-
-
+for g in range(total_num_generations):
+    model_list = create_run_new_gen(model_list, g+1)
 
 ###################
 # # Interupted

@@ -356,7 +356,8 @@ def model_output_to_pdframe(model_tested):
 
     user_path = '/Users/blakecuningham/'
     # log_directory_main = user_path + 'Documents/temp_RL_output/'
-    log_directory_main = '/Volumes/blakecjdl/RL_output/'
+    # log_directory_main = '/Volumes/blakecjdl/RL_output/'
+    log_directory_main = 'output/'
     log_directory = log_directory_main + model_name_for_directory
 
     # train0_directory = log_directory.replace('~/','') + '/train_0'
@@ -397,6 +398,8 @@ def model_name(model_tested):
 
     return model_name_for_directory
 
+
+# Evaluate previous?
 def model_results_summary_for_tournament(model_tested):
 
     name_of_model = model_name(model_tested)
@@ -940,9 +943,9 @@ def initialise_one_openai_layer():
 
 def new_generation_main(model_list_previous_gen, gen_number):
 
-    user_path = '/Users/blakecuningham/'
+    # user_path = '/Users/blakecuningham/'
 
-    EDEN_dir = '../../EDEN/test_models/fixed_params/'
+    # EDEN_dir = '../../EDEN/test_models/fixed_params/'
 
     # Get argument commands
     # parser = argparse.ArgumentParser(description="Get the model file")
@@ -955,7 +958,8 @@ def new_generation_main(model_list_previous_gen, gen_number):
     model_list = model_list_previous_gen
 
     # model_list = 'list_pop_20181028-N-1.json'
-    model_list_dir = EDEN_dir + model_list
+    # model_list_dir = EDEN_dir + model_list
+    model_list_dir = 'models/' + model_list
 
     population_of_models = load_population_json(model_list_dir)
 
@@ -965,7 +969,7 @@ def new_generation_main(model_list_previous_gen, gen_number):
         overall_results_frame = overall_results_frame.append(model_results_summary_for_tournament(model), ignore_index=True)
 
     tournament_size = 3
-    new_generation_size = 10
+    new_generation_size = 4 # multiply this by 3 to get the actual size - winners of previous, mutation 1 and mutation 2
 
     winner_chromosomes = select_tournament_winners(tournament_size, new_generation_size, population_of_models, overall_results_frame)
 
@@ -973,7 +977,9 @@ def new_generation_main(model_list_previous_gen, gen_number):
 
     new_generation_chromosomes = create_full_new_generation(winner_chromosomes, last_run_from_previous_gen)
 
-    file_path = '/Users/blakecuningham/Dropbox/MScDataScience/Thesis/EDEN/test_models/fixed_params/'
+    # file_path = '/Users/blakecuningham/Dropbox/MScDataScience/Thesis/EDEN/test_models/fixed_params/'
+    file_path = 'models/'
+
     for chromo in new_generation_chromosomes:
         chromo_file_name = chromo[0]
         with open(file_path + chromo_file_name, "wb") as filehandle:

@@ -10,7 +10,7 @@ from evolution_helpers import *
 ## Set key harcoded parameters ##
 
 run_attempt = 1
-first_generation_size = 3
+first_generation_size = 8
 
 # The seed which will be used by Python random and scikit learn Kfold
 seed_value = 7

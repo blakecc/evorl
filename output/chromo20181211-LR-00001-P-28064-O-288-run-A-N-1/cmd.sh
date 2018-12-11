@@ -1,0 +1,1 @@
+/Users/blakecuningham/anaconda3/envs/universe-starter-agent/bin/python train.py --num-workers 2 --env-id PongDeterministic-v3 --log-dir output/chromo20181211-LR-00001-P-28064-O-288-run-A-N-1 --model-dir models/chromo20181211-LR-0.0001-P-28064-O-288-run-A-N-1.p
