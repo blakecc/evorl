@@ -69,7 +69,7 @@ model_list_dir = 'models/' + model_list
 #
 #     return model_name_for_directory
 
-def model_results_summary(model_tested):
+def model_results_summary(model_tested, gen_num):
 
     name_of_model = model_name(model_tested)
 
@@ -102,29 +102,29 @@ def model_results_summary(model_tested):
     #     steps_n200 = np.nan
 
     try:
-        steps_n195 = test_model_results_df[100:][test_model_results_df[100:]['EMA'] >= -20.4][:1]['step'].values[0]
+        steps_n0 = test_model_results_df[100:][test_model_results_df[100:]['EMA'] >= 0][:1]['step'].values[0]
     except:
-        steps_n195 = np.nan
+        steps_n0 = np.nan
 
     ## Post X level stability
 
     try:
-        steps_n195_index = test_model_results_df[test_model_results_df['step'] == steps_n195].index[0]
-        resultstable_postn195SDT = test_model_results_df[steps_n195_index:]['ep_reward'].std()
+        steps_n0_index = test_model_results_df[test_model_results_df['step'] == steps_n0].index[0]
+        resultstable_postn0SDT = test_model_results_df[steps_n0_index:]['ep_reward'].std()
 
 
         ## Model speed - average episode time for games above X score
 
-        resultstable_postn195timeavg = test_model_results_df[steps_n195_index:]['ep_time'].mean()
+        resultstable_postn0timeavg = test_model_results_df[steps_n0_index:]['ep_time'].mean()
 
         # Model efficiency - average steps for games above X score
 
-        resultstable_postn195stepavg = test_model_results_df[steps_n195_index:]['ep_length'].mean()
+        resultstable_postn0stepavg = test_model_results_df[steps_n0_index:]['ep_length'].mean()
 
     except:
-        resultstable_postn195SDT = np.nan
-        resultstable_postn195timeavg = np.nan
-        resultstable_postn195stepavg = np.nan
+        resultstable_postn0SDT = np.nan
+        resultstable_postn0timeavg = np.nan
+        resultstable_postn0stepavg = np.nan
 
     ## Model structure info
 
@@ -150,8 +150,17 @@ def model_results_summary(model_tested):
 
     # np.max((test_model_results_df['EMA'][100:] + 21) / test_model_results_df['step'][100:])
 
+    # tournament score
+
+    tournament_score = (1 - ((resultstable_bestEMA + 21) / 42) +
+                        0.5*(1- 1/(1 + noise_std)) +
+                        0.5*(1 - 1/(1 + test_model_results_df['ep_time'].mean())))
+
     resultstable_vector = OrderedDict()
     # resultstable_vector['Model'] = [str(name_of_model)]
+    resultstable_vector['Name'] = model_tested[0].replace('.p','').replace('.','').split('chromo20181219-')[1].split('-run-')[0]
+    # resultstable_vector['Model number'] =
+    resultstable_vector['Generation'] = int(gen_num)
     resultstable_vector['LR'] = model_tested[1][1]
     resultstable_vector['Params'] = model_tested[1][2][0]
     resultstable_vector['Image net output'] = model_tested[1][2][1]
@@ -168,15 +177,36 @@ def model_results_summary(model_tested):
     resultstable_vector['Avg. episode steps'] = test_model_results_df['ep_length'].mean()
     resultstable_vector['Avg. episode time'] = test_model_results_df['ep_time'].mean()
     resultstable_vector['Avg. time per step'] = (test_model_results_df['ep_time'].sum() / test_model_results_df['ep_length'].sum())
-    resultstable_vector['Steps to mastery'] = [steps_n195]
-    resultstable_vector['Post mastery StD'] = [round(resultstable_postn195SDT,2)]
-    resultstable_vector['Post mastery avg. episode steps'] = [round(resultstable_postn195stepavg,2)]
-    resultstable_vector['Post mastery avg. episode time'] = [round(resultstable_postn195timeavg,2)]
+    resultstable_vector['Tournament score'] = [round(tournament_score, 2)]
+    resultstable_vector['Steps to mastery'] = [steps_n0]
+    resultstable_vector['Post mastery StD'] = [round(resultstable_postn0SDT,2)]
+    resultstable_vector['Post mastery avg. episode steps'] = [round(resultstable_postn0stepavg,2)]
+    resultstable_vector['Post mastery avg. episode time'] = [round(resultstable_postn0timeavg,2)]
 
     return pd.DataFrame(resultstable_vector)
 
 
-population_of_models = load_population_json(model_list_dir)
+json_list = []
+
+for mod in os.listdir('models'):
+    if mod.endswith('.json'):
+        # print(mod)
+        # json_list.append(load_population_json('models/' + mod))
+        list_num = int(mod.split('-G-')[1].split('.json')[0])
+        json_list.append([mod, list_num])
+
+def getKey(item):
+    return item[1]
+
+json_list = sorted(json_list, key=getKey)
+
+all_model_list_data = []
+
+for modlist in json_list:
+    all_model_list_data.append(load_population_json('models/' + modlist[0]))
+
+
+# population_of_models = load_population_json(model_list_dir)
 
 # TODO: Add fail reason
 # TODO: Add mastery level
@@ -184,17 +214,30 @@ population_of_models = load_population_json(model_list_dir)
 
 overall_results_frame = pd.DataFrame()
 
-for model in population_of_models:
-    overall_results_frame = overall_results_frame.append(model_results_summary(model), ignore_index=True)
+gen_num = 0
 
-overall_results_frame_sorted = overall_results_frame.sort_values(['Best EMA'], ascending=[False])
+for gen in all_model_list_data:
+    for mod in gen:
+        overall_results_frame = overall_results_frame.append(model_results_summary(mod, gen_num), ignore_index=True)
+        print('Done with: ' + mod[0] + '\n')
+    gen_num += 1
+
+# overall_results_frame_sorted = overall_results_frame.sort_values(['Generation', 'Best EMA'], ascending=[False])
 
 
-print(tabulate(overall_results_frame_sorted))
+# print(tabulate(overall_results_frame))
 
-writer = ExcelWriter(model_list.replace('.json', '') + '.xlsx')
-overall_results_frame_sorted.to_excel(writer,'Sheet1')
-writer.save()
+# writer = ExcelWriter('181231_overall_results_detailed' + '.xlsx')
+# overall_results_frame.to_excel(writer,'Sheet1')
+# writer.save()
+
+
+########### Other analyses
+
+
+
+
+
 
 # print(overall_results_frame)
 

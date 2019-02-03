@@ -1,0 +1,1991 @@
+\section{List of models}
+\subsection{Generation 0}
+\subsubsection*{LR-00001-P-28064-O-288}
+Learning rate: 0.000100
+\\Parameters in image layer: 28064
+\\Size of output from image layer to LSTM: 288
+\\\\\underline{Count of layers} 
+\\Conv 2D:           4\\Max pool 2D:      0\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrrl}
+\hline
+    & Type    &   Size &   Number & Activation   \\
+\hline
+  0 & conv\_2d &      3 &       32 & elu          \\
+  1 & conv\_2d &      3 &       32 & elu          \\
+  2 & conv\_2d &      3 &       32 & elu          \\
+  3 & conv\_2d &      3 &       32 & elu          \\
+\hline
+\end{tabular}\subsubsection*{LR-0000156-P-28870-O-44}
+Learning rate: 0.000156
+\\Parameters in image layer: 28870
+\\Size of output from image layer to LSTM: 44
+\\\\\underline{Count of layers} 
+\\Conv 2D:           4\\Max pool 2D:      2\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrll}
+\hline
+    & Type        &   Size & Number   & Activation   \\
+\hline
+  0 & conv\_2d     &      3 & 43       & leaky\_relu   \\
+  1 & max\_pool\_2d &      2 &          &              \\
+  2 & conv\_2d     &      3 & 27       & relu         \\
+  3 & conv\_2d     &      3 & 28       & elu          \\
+  4 & max\_pool\_2d &      2 &          &              \\
+  5 & conv\_2d     &      3 & 44       & leaky\_relu   \\
+\hline
+\end{tabular}\subsubsection*{LR-8e-05-P-38170-O-360}
+Learning rate: 0.000080
+\\Parameters in image layer: 38170
+\\Size of output from image layer to LSTM: 360
+\\\\\underline{Count of layers} 
+\\Conv 2D:           4\\Max pool 2D:      0\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrrl}
+\hline
+    & Type    &   Size &   Number & Activation   \\
+\hline
+  0 & conv\_2d &      3 &       25 & leaky\_relu   \\
+  1 & conv\_2d &      3 &       40 & leaky\_relu   \\
+  2 & conv\_2d &      3 &       40 & relu         \\
+  3 & conv\_2d &      3 &       40 & leaky\_relu   \\
+\hline
+\end{tabular}\subsubsection*{LR-24e-05-P-644478-O-45}
+Learning rate: 0.000024
+\\Parameters in image layer: 644478
+\\Size of output from image layer to LSTM: 45
+\\\\\underline{Count of layers} 
+\\Conv 2D:           1\\Max pool 2D:      0\\Fully connected:  2
+\\\\Detailed layers of model: \\\begin{tabular}{rllrl}
+\hline
+    & Type       & Size   &   Number & Activation   \\
+\hline
+  0 & conv\_2d    & 3      &       47 & leaky\_relu   \\
+  1 & fully\_conn &        &       31 & elu          \\
+  2 & fully\_conn &        &       45 & elu          \\
+\hline
+\end{tabular}\subsubsection*{LR-19e-05-P-88539-O-47}
+Learning rate: 0.000019
+\\Parameters in image layer: 88539
+\\Size of output from image layer to LSTM: 47
+\\\\\underline{Count of layers} 
+\\Conv 2D:           0\\Max pool 2D:      0\\Fully connected:  5
+\\\\Detailed layers of model: \\\begin{tabular}{rllrl}
+\hline
+    & Type       & Size   &   Number & Activation   \\
+\hline
+  0 & fully\_conn &        &       46 & elu          \\
+  1 & fully\_conn &        &       42 & elu          \\
+  2 & fully\_conn &        &       40 & relu         \\
+  3 & fully\_conn &        &       41 & elu          \\
+  4 & fully\_conn &        &       47 & sigmoid      \\
+\hline
+\end{tabular}\subsubsection*{LR-28e-05-P-20282-O-29}
+Learning rate: 0.000028
+\\Parameters in image layer: 20282
+\\Size of output from image layer to LSTM: 29
+\\\\\underline{Count of layers} 
+\\Conv 2D:           0\\Max pool 2D:      1\\Fully connected:  2
+\\\\Detailed layers of model: \\\begin{tabular}{rllll}
+\hline
+    & Type        & Size   & Number   & Activation   \\
+\hline
+  0 & max\_pool\_2d & 2      &          &              \\
+  1 & fully\_conn  &        & 43       & relu         \\
+  2 & fully\_conn  &        & 29       & sigmoid      \\
+\hline
+\end{tabular}\subsubsection*{LR-39e-05-P-35934-O-36}
+Learning rate: 0.000039
+\\Parameters in image layer: 35934
+\\Size of output from image layer to LSTM: 36
+\\\\\underline{Count of layers} 
+\\Conv 2D:           3\\Max pool 2D:      1\\Fully connected:  1
+\\\\Detailed layers of model: \\\begin{tabular}{rllll}
+\hline
+    & Type        & Size   & Number   & Activation   \\
+\hline
+  0 & conv\_2d     & 3      & 47       & elu          \\
+  1 & max\_pool\_2d & 2      &          &              \\
+  2 & conv\_2d     & 3      & 37       & leaky\_relu   \\
+  3 & conv\_2d     & 3      & 30       & leaky\_relu   \\
+  4 & fully\_conn  &        & 36       & relu         \\
+\hline
+\end{tabular}\subsubsection*{LR-0000176-P-72051-O-45}
+Learning rate: 0.000176
+\\Parameters in image layer: 72051
+\\Size of output from image layer to LSTM: 45
+\\\\\underline{Count of layers} 
+\\Conv 2D:           1\\Max pool 2D:      2\\Fully connected:  3
+\\\\Detailed layers of model: \\\begin{tabular}{rllll}
+\hline
+    & Type        & Size   & Number   & Activation   \\
+\hline
+  0 & max\_pool\_2d & 2      &          &              \\
+  1 & conv\_2d     & 3      & 43       & leaky\_relu   \\
+  2 & max\_pool\_2d & 2      &          &              \\
+  3 & fully\_conn  &        & 44       & softmax      \\
+  4 & fully\_conn  &        & 38       & sigmoid      \\
+  5 & fully\_conn  &        & 45       & softmax      \\
+\hline
+\end{tabular}\subsubsection*{LR-52e-05-P-155384-O-36}
+Learning rate: 0.000052
+\\Parameters in image layer: 155384
+\\Size of output from image layer to LSTM: 36
+\\\\\underline{Count of layers} 
+\\Conv 2D:           1\\Max pool 2D:      1\\Fully connected:  2
+\\\\Detailed layers of model: \\\begin{tabular}{rllll}
+\hline
+    & Type        & Size   & Number   & Activation   \\
+\hline
+  0 & max\_pool\_2d & 2      &          &              \\
+  1 & conv\_2d     & 3      & 41       & leaky\_relu   \\
+  2 & fully\_conn  &        & 31       & elu          \\
+  3 & fully\_conn  &        & 36       & elu          \\
+\hline
+\end{tabular}\subsubsection*{LR-98e-05-P-8338-O-24}
+Learning rate: 0.000098
+\\Parameters in image layer: 8338
+\\Size of output from image layer to LSTM: 24
+\\\\\underline{Count of layers} 
+\\Conv 2D:           0\\Max pool 2D:      2\\Fully connected:  4
+\\\\Detailed layers of model: \\\begin{tabular}{rllll}
+\hline
+    & Type        & Size   & Number   & Activation   \\
+\hline
+  0 & max\_pool\_2d & 2      &          &              \\
+  1 & max\_pool\_2d & 2      &          &              \\
+  2 & fully\_conn  &        & 34       & relu         \\
+  3 & fully\_conn  &        & 46       & softmax      \\
+  4 & fully\_conn  &        & 36       & relu         \\
+  5 & fully\_conn  &        & 24       & sigmoid      \\
+\hline
+\end{tabular}\subsubsection*{LR-71e-05-P-71871-O-41}
+Learning rate: 0.000071
+\\Parameters in image layer: 71871
+\\Size of output from image layer to LSTM: 41
+\\\\\underline{Count of layers} 
+\\Conv 2D:           4\\Max pool 2D:      0\\Fully connected:  1
+\\\\Detailed layers of model: \\\begin{tabular}{rllrl}
+\hline
+    & Type       & Size   &   Number & Activation   \\
+\hline
+  0 & conv\_2d    & 3      &       47 & elu          \\
+  1 & conv\_2d    & 3      &       44 & relu         \\
+  2 & conv\_2d    & 3      &       44 & relu         \\
+  3 & conv\_2d    & 3      &       46 & relu         \\
+  4 & fully\_conn &        &       41 & relu         \\
+\hline
+\end{tabular}\subsubsection*{LR-0000111-P-9516-O-369}
+Learning rate: 0.000111
+\\Parameters in image layer: 9516
+\\Size of output from image layer to LSTM: 369
+\\\\\underline{Count of layers} 
+\\Conv 2D:           2\\Max pool 2D:      2\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrll}
+\hline
+    & Type        &   Size & Number   & Activation   \\
+\hline
+  0 & conv\_2d     &      3 & 25       & relu         \\
+  1 & max\_pool\_2d &      2 &          &              \\
+  2 & max\_pool\_2d &      2 &          &              \\
+  3 & conv\_2d     &      3 & 41       & relu         \\
+\hline
+\end{tabular}\subsection{Generation 1}
+\subsubsection*{LR-00001-P-28064-O-288}
+Learning rate: 0.000100
+\\Parameters in image layer: 28064
+\\Size of output from image layer to LSTM: 288
+\\\\\underline{Count of layers} 
+\\Conv 2D:           4\\Max pool 2D:      0\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrrl}
+\hline
+    & Type    &   Size &   Number & Activation   \\
+\hline
+  0 & conv\_2d &      3 &       32 & elu          \\
+  1 & conv\_2d &      3 &       32 & elu          \\
+  2 & conv\_2d &      3 &       32 & elu          \\
+  3 & conv\_2d &      3 &       32 & elu          \\
+\hline
+\end{tabular}\subsubsection*{LR-0000111-P-9516-O-369}
+Learning rate: 0.000111
+\\Parameters in image layer: 9516
+\\Size of output from image layer to LSTM: 369
+\\\\\underline{Count of layers} 
+\\Conv 2D:           2\\Max pool 2D:      2\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrll}
+\hline
+    & Type        &   Size & Number   & Activation   \\
+\hline
+  0 & conv\_2d     &      3 & 25       & relu         \\
+  1 & max\_pool\_2d &      2 &          &              \\
+  2 & max\_pool\_2d &      2 &          &              \\
+  3 & conv\_2d     &      3 & 41       & relu         \\
+\hline
+\end{tabular}\subsubsection*{LR-8e-05-P-38170-O-360}
+Learning rate: 0.000080
+\\Parameters in image layer: 38170
+\\Size of output from image layer to LSTM: 360
+\\\\\underline{Count of layers} 
+\\Conv 2D:           4\\Max pool 2D:      0\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrrl}
+\hline
+    & Type    &   Size &   Number & Activation   \\
+\hline
+  0 & conv\_2d &      3 &       25 & leaky\_relu   \\
+  1 & conv\_2d &      3 &       40 & leaky\_relu   \\
+  2 & conv\_2d &      3 &       40 & relu         \\
+  3 & conv\_2d &      3 &       40 & leaky\_relu   \\
+\hline
+\end{tabular}\subsubsection*{LR-0000156-P-28870-O-44}
+Learning rate: 0.000156
+\\Parameters in image layer: 28870
+\\Size of output from image layer to LSTM: 44
+\\\\\underline{Count of layers} 
+\\Conv 2D:           4\\Max pool 2D:      2\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrll}
+\hline
+    & Type        &   Size & Number   & Activation   \\
+\hline
+  0 & conv\_2d     &      3 & 43       & leaky\_relu   \\
+  1 & max\_pool\_2d &      2 &          &              \\
+  2 & conv\_2d     &      3 & 27       & relu         \\
+  3 & conv\_2d     &      3 & 28       & elu          \\
+  4 & max\_pool\_2d &      2 &          &              \\
+  5 & conv\_2d     &      3 & 44       & leaky\_relu   \\
+\hline
+\end{tabular}\subsubsection*{LR-46e-05-P-44236-O-128}
+Learning rate: 0.000046
+\\Parameters in image layer: 44236
+\\Size of output from image layer to LSTM: 128
+\\\\\underline{Count of layers} 
+\\Conv 2D:           5\\Max pool 2D:      0\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrrl}
+\hline
+    & Type    &   Size &   Number & Activation   \\
+\hline
+  0 & conv\_2d &      3 &       32 & elu          \\
+  1 & conv\_2d &      3 &       32 & elu          \\
+  2 & conv\_2d &      3 &       32 & elu          \\
+  3 & conv\_2d &      3 &       44 & relu         \\
+  4 & conv\_2d &      3 &       32 & elu          \\
+\hline
+\end{tabular}\subsubsection*{LR-0000111-P-16951-O-369}
+Learning rate: 0.000111
+\\Parameters in image layer: 16951
+\\Size of output from image layer to LSTM: 369
+\\\\\underline{Count of layers} 
+\\Conv 2D:           3\\Max pool 2D:      1\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrll}
+\hline
+    & Type        &   Size & Number   & Activation   \\
+\hline
+  0 & conv\_2d     &      3 & 25       & relu         \\
+  1 & max\_pool\_2d &      2 &          &              \\
+  2 & conv\_2d     &      3 & 28       & elu          \\
+  3 & conv\_2d     &      3 & 41       & relu         \\
+\hline
+\end{tabular}\subsubsection*{LR-0000109-P-23730-O-1440}
+Learning rate: 0.000109
+\\Parameters in image layer: 23730
+\\Size of output from image layer to LSTM: 1440
+\\\\\underline{Count of layers} 
+\\Conv 2D:           3\\Max pool 2D:      0\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrrl}
+\hline
+    & Type    &   Size &   Number & Activation   \\
+\hline
+  0 & conv\_2d &      3 &       25 & leaky\_relu   \\
+  1 & conv\_2d &      3 &       40 & relu         \\
+  2 & conv\_2d &      3 &       40 & leaky\_relu   \\
+\hline
+\end{tabular}\subsubsection*{LR-0000232-P-30790-O-44}
+Learning rate: 0.000232
+\\Parameters in image layer: 30790
+\\Size of output from image layer to LSTM: 44
+\\\\\underline{Count of layers} 
+\\Conv 2D:           4\\Max pool 2D:      2\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrll}
+\hline
+    & Type        &   Size & Number   & Activation   \\
+\hline
+  0 & conv\_2d     &      3 & 43       & leaky\_relu   \\
+  1 & max\_pool\_2d &      2 &          &              \\
+  2 & conv\_2d     &      3 & 30       & leaky\_relu   \\
+  3 & conv\_2d     &      3 & 28       & elu          \\
+  4 & max\_pool\_2d &      2 &          &              \\
+  5 & conv\_2d     &      3 & 44       & leaky\_relu   \\
+\hline
+\end{tabular}\subsubsection*{LR-46e-05-P-34988-O-288}
+Learning rate: 0.000046
+\\Parameters in image layer: 34988
+\\Size of output from image layer to LSTM: 288
+\\\\\underline{Count of layers} 
+\\Conv 2D:           4\\Max pool 2D:      0\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrrl}
+\hline
+    & Type    &   Size &   Number & Activation   \\
+\hline
+  0 & conv\_2d &      3 &       32 & elu          \\
+  1 & conv\_2d &      3 &       32 & elu          \\
+  2 & conv\_2d &      3 &       44 & relu         \\
+  3 & conv\_2d &      3 &       32 & elu          \\
+\hline
+\end{tabular}\subsubsection*{LR-0000111-P-9516-O-369}
+Learning rate: 0.000111
+\\Parameters in image layer: 9516
+\\Size of output from image layer to LSTM: 369
+\\\\\underline{Count of layers} 
+\\Conv 2D:           2\\Max pool 2D:      2\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrll}
+\hline
+    & Type        &   Size & Number   & Activation   \\
+\hline
+  0 & conv\_2d     &      3 & 25       & relu         \\
+  1 & max\_pool\_2d &      2 &          &              \\
+  2 & max\_pool\_2d &      2 &          &              \\
+  3 & conv\_2d     &      3 & 41       & relu         \\
+\hline
+\end{tabular}\subsubsection*{LR-0000109-P-20800-O-1440}
+Learning rate: 0.000109
+\\Parameters in image layer: 20800
+\\Size of output from image layer to LSTM: 1440
+\\\\\underline{Count of layers} 
+\\Conv 2D:           3\\Max pool 2D:      0\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrrl}
+\hline
+    & Type    &   Size &   Number & Activation   \\
+\hline
+  0 & conv\_2d &      3 &       25 & leaky\_relu   \\
+  1 & conv\_2d &      3 &       35 & elu          \\
+  2 & conv\_2d &      3 &       40 & leaky\_relu   \\
+\hline
+\end{tabular}\subsubsection*{LR-94e-05-P-22822-O-28}
+Learning rate: 0.000094
+\\Parameters in image layer: 22822
+\\Size of output from image layer to LSTM: 28
+\\\\\underline{Count of layers} 
+\\Conv 2D:           3\\Max pool 2D:      2\\Fully connected:  1
+\\\\Detailed layers of model: \\\begin{tabular}{rllll}
+\hline
+    & Type        & Size   & Number   & Activation   \\
+\hline
+  0 & conv\_2d     & 3      & 43       & leaky\_relu   \\
+  1 & max\_pool\_2d & 2      &          &              \\
+  2 & conv\_2d     & 3      & 30       & leaky\_relu   \\
+  3 & conv\_2d     & 3      & 28       & elu          \\
+  4 & max\_pool\_2d & 2      &          &              \\
+  5 & fully\_conn  &        & 28       & elu          \\
+\hline
+\end{tabular}\subsection{Generation 2}
+\subsubsection*{LR-00001-P-28064-O-288}
+Learning rate: 0.000100
+\\Parameters in image layer: 28064
+\\Size of output from image layer to LSTM: 288
+\\\\\underline{Count of layers} 
+\\Conv 2D:           4\\Max pool 2D:      0\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrrl}
+\hline
+    & Type    &   Size &   Number & Activation   \\
+\hline
+  0 & conv\_2d &      3 &       32 & elu          \\
+  1 & conv\_2d &      3 &       32 & elu          \\
+  2 & conv\_2d &      3 &       32 & elu          \\
+  3 & conv\_2d &      3 &       32 & elu          \\
+\hline
+\end{tabular}\subsubsection*{LR-0000111-P-16951-O-369}
+Learning rate: 0.000111
+\\Parameters in image layer: 16951
+\\Size of output from image layer to LSTM: 369
+\\\\\underline{Count of layers} 
+\\Conv 2D:           3\\Max pool 2D:      1\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrll}
+\hline
+    & Type        &   Size & Number   & Activation   \\
+\hline
+  0 & conv\_2d     &      3 & 25       & relu         \\
+  1 & max\_pool\_2d &      2 &          &              \\
+  2 & conv\_2d     &      3 & 28       & elu          \\
+  3 & conv\_2d     &      3 & 41       & relu         \\
+\hline
+\end{tabular}\subsubsection*{LR-00001-P-28064-O-288}
+Learning rate: 0.000100
+\\Parameters in image layer: 28064
+\\Size of output from image layer to LSTM: 288
+\\\\\underline{Count of layers} 
+\\Conv 2D:           4\\Max pool 2D:      0\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrrl}
+\hline
+    & Type    &   Size &   Number & Activation   \\
+\hline
+  0 & conv\_2d &      3 &       32 & elu          \\
+  1 & conv\_2d &      3 &       32 & elu          \\
+  2 & conv\_2d &      3 &       32 & elu          \\
+  3 & conv\_2d &      3 &       32 & elu          \\
+\hline
+\end{tabular}\subsubsection*{LR-0000109-P-20800-O-1440}
+Learning rate: 0.000109
+\\Parameters in image layer: 20800
+\\Size of output from image layer to LSTM: 1440
+\\\\\underline{Count of layers} 
+\\Conv 2D:           3\\Max pool 2D:      0\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrrl}
+\hline
+    & Type    &   Size &   Number & Activation   \\
+\hline
+  0 & conv\_2d &      3 &       25 & leaky\_relu   \\
+  1 & conv\_2d &      3 &       35 & elu          \\
+  2 & conv\_2d &      3 &       40 & leaky\_relu   \\
+\hline
+\end{tabular}\subsubsection*{LR-46e-05-P-29220-O-324}
+Learning rate: 0.000046
+\\Parameters in image layer: 29220
+\\Size of output from image layer to LSTM: 324
+\\\\\underline{Count of layers} 
+\\Conv 2D:           4\\Max pool 2D:      0\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrrl}
+\hline
+    & Type    &   Size &   Number & Activation   \\
+\hline
+  0 & conv\_2d &      3 &       32 & elu          \\
+  1 & conv\_2d &      3 &       32 & elu          \\
+  2 & conv\_2d &      3 &       32 & elu          \\
+  3 & conv\_2d &      3 &       36 & relu         \\
+\hline
+\end{tabular}\subsubsection*{LR-0000111-P-24035-O-164}
+Learning rate: 0.000111
+\\Parameters in image layer: 24035
+\\Size of output from image layer to LSTM: 164
+\\\\\underline{Count of layers} 
+\\Conv 2D:           4\\Max pool 2D:      1\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrll}
+\hline
+    & Type        &   Size & Number   & Activation   \\
+\hline
+  0 & conv\_2d     &      3 & 25       & relu         \\
+  1 & conv\_2d     &      3 & 28       & elu          \\
+  2 & max\_pool\_2d &      2 &          &              \\
+  3 & conv\_2d     &      3 & 28       & elu          \\
+  4 & conv\_2d     &      3 & 41       & relu         \\
+\hline
+\end{tabular}\subsubsection*{LR-1e-06-P-31044-O-288}
+Learning rate: 0.000001
+\\Parameters in image layer: 31044
+\\Size of output from image layer to LSTM: 288
+\\\\\underline{Count of layers} 
+\\Conv 2D:           4\\Max pool 2D:      0\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrrl}
+\hline
+    & Type    &   Size &   Number & Activation   \\
+\hline
+  0 & conv\_2d &      3 &       42 & leaky\_relu   \\
+  1 & conv\_2d &      3 &       32 & elu          \\
+  2 & conv\_2d &      3 &       32 & elu          \\
+  3 & conv\_2d &      3 &       32 & elu          \\
+\hline
+\end{tabular}\subsubsection*{LR-0000242-P-8160-O-4235}
+Learning rate: 0.000242
+\\Parameters in image layer: 8160
+\\Size of output from image layer to LSTM: 4235
+\\\\\underline{Count of layers} 
+\\Conv 2D:           2\\Max pool 2D:      0\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrrl}
+\hline
+    & Type    &   Size &   Number & Activation   \\
+\hline
+  0 & conv\_2d &      3 &       25 & leaky\_relu   \\
+  1 & conv\_2d &      3 &       35 & elu          \\
+\hline
+\end{tabular}\subsubsection*{LR-46e-05-P-18816-O-1152}
+Learning rate: 0.000046
+\\Parameters in image layer: 18816
+\\Size of output from image layer to LSTM: 1152
+\\\\\underline{Count of layers} 
+\\Conv 2D:           3\\Max pool 2D:      0\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrrl}
+\hline
+    & Type    &   Size &   Number & Activation   \\
+\hline
+  0 & conv\_2d &      3 &       32 & elu          \\
+  1 & conv\_2d &      3 &       32 & elu          \\
+  2 & conv\_2d &      3 &       32 & elu          \\
+\hline
+\end{tabular}\subsubsection*{LR-0000111-P-13662-O-252}
+Learning rate: 0.000111
+\\Parameters in image layer: 13662
+\\Size of output from image layer to LSTM: 252
+\\\\\underline{Count of layers} 
+\\Conv 2D:           3\\Max pool 2D:      1\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrll}
+\hline
+    & Type        &   Size & Number   & Activation   \\
+\hline
+  0 & conv\_2d     &      3 & 25       & relu         \\
+  1 & conv\_2d     &      3 & 28       & elu          \\
+  2 & max\_pool\_2d &      2 &          &              \\
+  3 & conv\_2d     &      3 & 28       & elu          \\
+\hline
+\end{tabular}\subsubsection*{LR-2e-06-P-37407-O-128}
+Learning rate: 0.000002
+\\Parameters in image layer: 37407
+\\Size of output from image layer to LSTM: 128
+\\\\\underline{Count of layers} 
+\\Conv 2D:           5\\Max pool 2D:      0\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrrl}
+\hline
+    & Type    &   Size &   Number & Activation   \\
+\hline
+  0 & conv\_2d &      3 &       42 & leaky\_relu   \\
+  1 & conv\_2d &      3 &       32 & elu          \\
+  2 & conv\_2d &      3 &       27 & relu         \\
+  3 & conv\_2d &      3 &       32 & elu          \\
+  4 & conv\_2d &      3 &       32 & elu          \\
+\hline
+\end{tabular}\subsubsection*{LR-0000242-P-8160-O-1260}
+Learning rate: 0.000242
+\\Parameters in image layer: 8160
+\\Size of output from image layer to LSTM: 1260
+\\\\\underline{Count of layers} 
+\\Conv 2D:           2\\Max pool 2D:      1\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrll}
+\hline
+    & Type        &   Size & Number   & Activation   \\
+\hline
+  0 & max\_pool\_2d &      2 &          &              \\
+  1 & conv\_2d     &      3 & 25       & leaky\_relu   \\
+  2 & conv\_2d     &      3 & 35       & elu          \\
+\hline
+\end{tabular}\subsection{Generation 3}
+\subsubsection*{LR-0000111-P-16951-O-369}
+Learning rate: 0.000111
+\\Parameters in image layer: 16951
+\\Size of output from image layer to LSTM: 369
+\\\\\underline{Count of layers} 
+\\Conv 2D:           3\\Max pool 2D:      1\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrll}
+\hline
+    & Type        &   Size & Number   & Activation   \\
+\hline
+  0 & conv\_2d     &      3 & 25       & relu         \\
+  1 & max\_pool\_2d &      2 &          &              \\
+  2 & conv\_2d     &      3 & 28       & elu          \\
+  3 & conv\_2d     &      3 & 41       & relu         \\
+\hline
+\end{tabular}\subsubsection*{LR-0000242-P-8160-O-1260}
+Learning rate: 0.000242
+\\Parameters in image layer: 8160
+\\Size of output from image layer to LSTM: 1260
+\\\\\underline{Count of layers} 
+\\Conv 2D:           2\\Max pool 2D:      1\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrll}
+\hline
+    & Type        &   Size & Number   & Activation   \\
+\hline
+  0 & max\_pool\_2d &      2 &          &              \\
+  1 & conv\_2d     &      3 & 25       & leaky\_relu   \\
+  2 & conv\_2d     &      3 & 35       & elu          \\
+\hline
+\end{tabular}\subsubsection*{LR-00001-P-28064-O-288}
+Learning rate: 0.000100
+\\Parameters in image layer: 28064
+\\Size of output from image layer to LSTM: 288
+\\\\\underline{Count of layers} 
+\\Conv 2D:           4\\Max pool 2D:      0\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrrl}
+\hline
+    & Type    &   Size &   Number & Activation   \\
+\hline
+  0 & conv\_2d &      3 &       32 & elu          \\
+  1 & conv\_2d &      3 &       32 & elu          \\
+  2 & conv\_2d &      3 &       32 & elu          \\
+  3 & conv\_2d &      3 &       32 & elu          \\
+\hline
+\end{tabular}\subsubsection*{LR-0000109-P-20800-O-1440}
+Learning rate: 0.000109
+\\Parameters in image layer: 20800
+\\Size of output from image layer to LSTM: 1440
+\\\\\underline{Count of layers} 
+\\Conv 2D:           3\\Max pool 2D:      0\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrrl}
+\hline
+    & Type    &   Size &   Number & Activation   \\
+\hline
+  0 & conv\_2d &      3 &       25 & leaky\_relu   \\
+  1 & conv\_2d &      3 &       35 & elu          \\
+  2 & conv\_2d &      3 &       40 & leaky\_relu   \\
+\hline
+\end{tabular}\subsubsection*{LR-0000111-P-24951-O-164}
+Learning rate: 0.000111
+\\Parameters in image layer: 24951
+\\Size of output from image layer to LSTM: 164
+\\\\\underline{Count of layers} 
+\\Conv 2D:           4\\Max pool 2D:      1\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrll}
+\hline
+    & Type        &   Size & Number   & Activation   \\
+\hline
+  0 & conv\_2d     &      3 & 35       & elu          \\
+  1 & conv\_2d     &      3 & 25       & relu         \\
+  2 & max\_pool\_2d &      2 &          &              \\
+  3 & conv\_2d     &      3 & 28       & elu          \\
+  4 & conv\_2d     &      3 & 41       & relu         \\
+\hline
+\end{tabular}\subsubsection*{LR-0000691-P-8160-O-315}
+Learning rate: 0.000691
+\\Parameters in image layer: 8160
+\\Size of output from image layer to LSTM: 315
+\\\\\underline{Count of layers} 
+\\Conv 2D:           2\\Max pool 2D:      2\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrll}
+\hline
+    & Type        &   Size & Number   & Activation   \\
+\hline
+  0 & max\_pool\_2d &      2 &          &              \\
+  1 & conv\_2d     &      3 & 25       & leaky\_relu   \\
+  2 & conv\_2d     &      3 & 35       & elu          \\
+  3 & max\_pool\_2d &      2 &          &              \\
+\hline
+\end{tabular}\subsubsection*{LR-46e-05-P-31938-O-288}
+Learning rate: 0.000046
+\\Parameters in image layer: 31938
+\\Size of output from image layer to LSTM: 288
+\\\\\underline{Count of layers} 
+\\Conv 2D:           4\\Max pool 2D:      0\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrrl}
+\hline
+    & Type    &   Size &   Number & Activation   \\
+\hline
+  0 & conv\_2d &      3 &       45 & relu         \\
+  1 & conv\_2d &      3 &       32 & elu          \\
+  2 & conv\_2d &      3 &       32 & elu          \\
+  3 & conv\_2d &      3 &       32 & elu          \\
+\hline
+\end{tabular}\subsubsection*{LR-0000109-P-12990-O-1440}
+Learning rate: 0.000109
+\\Parameters in image layer: 12990
+\\Size of output from image layer to LSTM: 1440
+\\\\\underline{Count of layers} 
+\\Conv 2D:           2\\Max pool 2D:      1\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrll}
+\hline
+    & Type        &   Size & Number   & Activation   \\
+\hline
+  0 & max\_pool\_2d &      2 &          &              \\
+  1 & conv\_2d     &      3 & 35       & elu          \\
+  2 & conv\_2d     &      3 & 40       & leaky\_relu   \\
+\hline
+\end{tabular}\subsubsection*{LR-0000111-P-28359-O-164}
+Learning rate: 0.000111
+\\Parameters in image layer: 28359
+\\Size of output from image layer to LSTM: 164
+\\\\\underline{Count of layers} 
+\\Conv 2D:           4\\Max pool 2D:      1\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrll}
+\hline
+    & Type        &   Size & Number   & Activation   \\
+\hline
+  0 & conv\_2d     &      3 & 35       & elu          \\
+  1 & conv\_2d     &      3 & 31       & elu          \\
+  2 & max\_pool\_2d &      2 &          &              \\
+  3 & conv\_2d     &      3 & 28       & elu          \\
+  4 & conv\_2d     &      3 & 41       & relu         \\
+\hline
+\end{tabular}\subsubsection*{LR-0000691-P-8160-O-1260}
+Learning rate: 0.000691
+\\Parameters in image layer: 8160
+\\Size of output from image layer to LSTM: 1260
+\\\\\underline{Count of layers} 
+\\Conv 2D:           2\\Max pool 2D:      1\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrll}
+\hline
+    & Type        &   Size & Number   & Activation   \\
+\hline
+  0 & max\_pool\_2d &      2 &          &              \\
+  1 & conv\_2d     &      3 & 25       & leaky\_relu   \\
+  2 & conv\_2d     &      3 & 35       & elu          \\
+\hline
+\end{tabular}\subsubsection*{LR-84e-05-P-27774-O-288}
+Learning rate: 0.000084
+\\Parameters in image layer: 27774
+\\Size of output from image layer to LSTM: 288
+\\\\\underline{Count of layers} 
+\\Conv 2D:           4\\Max pool 2D:      0\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrrl}
+\hline
+    & Type    &   Size &   Number & Activation   \\
+\hline
+  0 & conv\_2d &      3 &       45 & relu         \\
+  1 & conv\_2d &      3 &       26 & leaky\_relu   \\
+  2 & conv\_2d &      3 &       32 & elu          \\
+  3 & conv\_2d &      3 &       32 & elu          \\
+\hline
+\end{tabular}\subsubsection*{LR-0000109-P-350-O-4235}
+Learning rate: 0.000109
+\\Parameters in image layer: 350
+\\Size of output from image layer to LSTM: 4235
+\\\\\underline{Count of layers} 
+\\Conv 2D:           1\\Max pool 2D:      1\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrll}
+\hline
+    & Type        &   Size & Number   & Activation   \\
+\hline
+  0 & max\_pool\_2d &      2 &          &              \\
+  1 & conv\_2d     &      3 & 35       & elu          \\
+\hline
+\end{tabular}\subsection{Generation 4}
+\subsubsection*{LR-0000691-P-8160-O-1260}
+Learning rate: 0.000691
+\\Parameters in image layer: 8160
+\\Size of output from image layer to LSTM: 1260
+\\\\\underline{Count of layers} 
+\\Conv 2D:           2\\Max pool 2D:      1\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrll}
+\hline
+    & Type        &   Size & Number   & Activation   \\
+\hline
+  0 & max\_pool\_2d &      2 &          &              \\
+  1 & conv\_2d     &      3 & 25       & leaky\_relu   \\
+  2 & conv\_2d     &      3 & 35       & elu          \\
+\hline
+\end{tabular}\subsubsection*{LR-0000111-P-16951-O-369}
+Learning rate: 0.000111
+\\Parameters in image layer: 16951
+\\Size of output from image layer to LSTM: 369
+\\\\\underline{Count of layers} 
+\\Conv 2D:           3\\Max pool 2D:      1\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrll}
+\hline
+    & Type        &   Size & Number   & Activation   \\
+\hline
+  0 & conv\_2d     &      3 & 25       & relu         \\
+  1 & max\_pool\_2d &      2 &          &              \\
+  2 & conv\_2d     &      3 & 28       & elu          \\
+  3 & conv\_2d     &      3 & 41       & relu         \\
+\hline
+\end{tabular}\subsubsection*{LR-0000691-P-8160-O-315}
+Learning rate: 0.000691
+\\Parameters in image layer: 8160
+\\Size of output from image layer to LSTM: 315
+\\\\\underline{Count of layers} 
+\\Conv 2D:           2\\Max pool 2D:      2\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrll}
+\hline
+    & Type        &   Size & Number   & Activation   \\
+\hline
+  0 & max\_pool\_2d &      2 &          &              \\
+  1 & conv\_2d     &      3 & 25       & leaky\_relu   \\
+  2 & conv\_2d     &      3 & 35       & elu          \\
+  3 & max\_pool\_2d &      2 &          &              \\
+\hline
+\end{tabular}\subsubsection*{LR-00001-P-28064-O-288}
+Learning rate: 0.000100
+\\Parameters in image layer: 28064
+\\Size of output from image layer to LSTM: 288
+\\\\\underline{Count of layers} 
+\\Conv 2D:           4\\Max pool 2D:      0\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrrl}
+\hline
+    & Type    &   Size &   Number & Activation   \\
+\hline
+  0 & conv\_2d &      3 &       32 & elu          \\
+  1 & conv\_2d &      3 &       32 & elu          \\
+  2 & conv\_2d &      3 &       32 & elu          \\
+  3 & conv\_2d &      3 &       32 & elu          \\
+\hline
+\end{tabular}\subsubsection*{LR-0000691-P-8160-O-4235}
+Learning rate: 0.000691
+\\Parameters in image layer: 8160
+\\Size of output from image layer to LSTM: 4235
+\\\\\underline{Count of layers} 
+\\Conv 2D:           2\\Max pool 2D:      0\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrrl}
+\hline
+    & Type    &   Size &   Number & Activation   \\
+\hline
+  0 & conv\_2d &      3 &       25 & leaky\_relu   \\
+  1 & conv\_2d &      3 &       35 & elu          \\
+\hline
+\end{tabular}\subsubsection*{LR-1e-06-P-16951-O-1476}
+Learning rate: 0.000001
+\\Parameters in image layer: 16951
+\\Size of output from image layer to LSTM: 1476
+\\\\\underline{Count of layers} 
+\\Conv 2D:           3\\Max pool 2D:      0\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrrl}
+\hline
+    & Type    &   Size &   Number & Activation   \\
+\hline
+  0 & conv\_2d &      3 &       25 & relu         \\
+  1 & conv\_2d &      3 &       28 & elu          \\
+  2 & conv\_2d &      3 &       41 & relu         \\
+\hline
+\end{tabular}\subsubsection*{LR-0000691-P-10760-O-315}
+Learning rate: 0.000691
+\\Parameters in image layer: 10760
+\\Size of output from image layer to LSTM: 315
+\\\\\underline{Count of layers} 
+\\Conv 2D:           2\\Max pool 2D:      2\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrll}
+\hline
+    & Type        &   Size & Number   & Activation   \\
+\hline
+  0 & max\_pool\_2d &      2 &          &              \\
+  1 & conv\_2d     &      3 & 33       & relu         \\
+  2 & conv\_2d     &      3 & 35       & elu          \\
+  3 & max\_pool\_2d &      2 &          &              \\
+\hline
+\end{tabular}\subsubsection*{LR-00001-P-18816-O-1152}
+Learning rate: 0.000100
+\\Parameters in image layer: 18816
+\\Size of output from image layer to LSTM: 1152
+\\\\\underline{Count of layers} 
+\\Conv 2D:           3\\Max pool 2D:      0\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrrl}
+\hline
+    & Type    &   Size &   Number & Activation   \\
+\hline
+  0 & conv\_2d &      3 &       32 & elu          \\
+  1 & conv\_2d &      3 &       32 & elu          \\
+  2 & conv\_2d &      3 &       32 & elu          \\
+\hline
+\end{tabular}\subsubsection*{LR-1e-06-P-109824-O-24}
+Learning rate: 0.000001
+\\Parameters in image layer: 109824
+\\Size of output from image layer to LSTM: 24
+\\\\\underline{Count of layers} 
+\\Conv 2D:           2\\Max pool 2D:      0\\Fully connected:  1
+\\\\Detailed layers of model: \\\begin{tabular}{rllrl}
+\hline
+    & Type       & Size   &   Number & Activation   \\
+\hline
+  0 & conv\_2d    & 3      &       25 & leaky\_relu   \\
+  1 & conv\_2d    & 3      &       35 & elu          \\
+  2 & fully\_conn &        &       24 & sigmoid      \\
+\hline
+\end{tabular}\subsubsection*{LR-1e-06-P-16951-O-369}
+Learning rate: 0.000001
+\\Parameters in image layer: 16951
+\\Size of output from image layer to LSTM: 369
+\\\\\underline{Count of layers} 
+\\Conv 2D:           3\\Max pool 2D:      1\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrll}
+\hline
+    & Type        &   Size & Number   & Activation   \\
+\hline
+  0 & conv\_2d     &      3 & 25       & relu         \\
+  1 & conv\_2d     &      3 & 28       & elu          \\
+  2 & max\_pool\_2d &      2 &          &              \\
+  3 & conv\_2d     &      3 & 41       & relu         \\
+\hline
+\end{tabular}\subsubsection*{LR-0000691-P-22129-O-140}
+Learning rate: 0.000691
+\\Parameters in image layer: 22129
+\\Size of output from image layer to LSTM: 140
+\\\\\underline{Count of layers} 
+\\Conv 2D:           3\\Max pool 2D:      2\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrll}
+\hline
+    & Type        &   Size & Number   & Activation   \\
+\hline
+  0 & max\_pool\_2d &      2 &          &              \\
+  1 & conv\_2d     &      3 & 38       & relu         \\
+  2 & conv\_2d     &      3 & 33       & relu         \\
+  3 & conv\_2d     &      3 & 35       & elu          \\
+  4 & max\_pool\_2d &      2 &          &              \\
+\hline
+\end{tabular}\subsubsection*{LR-0000133-P-9568-O-1152}
+Learning rate: 0.000133
+\\Parameters in image layer: 9568
+\\Size of output from image layer to LSTM: 1152
+\\\\\underline{Count of layers} 
+\\Conv 2D:           2\\Max pool 2D:      1\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrll}
+\hline
+    & Type        &   Size & Number   & Activation   \\
+\hline
+  0 & max\_pool\_2d &      2 &          &              \\
+  1 & conv\_2d     &      3 & 32       & elu          \\
+  2 & conv\_2d     &      3 & 32       & elu          \\
+\hline
+\end{tabular}\subsection{Generation 5}
+\subsubsection*{LR-00001-P-18816-O-1152}
+Learning rate: 0.000100
+\\Parameters in image layer: 18816
+\\Size of output from image layer to LSTM: 1152
+\\\\\underline{Count of layers} 
+\\Conv 2D:           3\\Max pool 2D:      0\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrrl}
+\hline
+    & Type    &   Size &   Number & Activation   \\
+\hline
+  0 & conv\_2d &      3 &       32 & elu          \\
+  1 & conv\_2d &      3 &       32 & elu          \\
+  2 & conv\_2d &      3 &       32 & elu          \\
+\hline
+\end{tabular}\subsubsection*{LR-00001-P-18816-O-1152}
+Learning rate: 0.000100
+\\Parameters in image layer: 18816
+\\Size of output from image layer to LSTM: 1152
+\\\\\underline{Count of layers} 
+\\Conv 2D:           3\\Max pool 2D:      0\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrrl}
+\hline
+    & Type    &   Size &   Number & Activation   \\
+\hline
+  0 & conv\_2d &      3 &       32 & elu          \\
+  1 & conv\_2d &      3 &       32 & elu          \\
+  2 & conv\_2d &      3 &       32 & elu          \\
+\hline
+\end{tabular}\subsubsection*{LR-0000691-P-8160-O-315}
+Learning rate: 0.000691
+\\Parameters in image layer: 8160
+\\Size of output from image layer to LSTM: 315
+\\\\\underline{Count of layers} 
+\\Conv 2D:           2\\Max pool 2D:      2\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrll}
+\hline
+    & Type        &   Size & Number   & Activation   \\
+\hline
+  0 & max\_pool\_2d &      2 &          &              \\
+  1 & conv\_2d     &      3 & 25       & leaky\_relu   \\
+  2 & conv\_2d     &      3 & 35       & elu          \\
+  3 & max\_pool\_2d &      2 &          &              \\
+\hline
+\end{tabular}\subsubsection*{LR-00001-P-28064-O-288}
+Learning rate: 0.000100
+\\Parameters in image layer: 28064
+\\Size of output from image layer to LSTM: 288
+\\\\\underline{Count of layers} 
+\\Conv 2D:           4\\Max pool 2D:      0\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrrl}
+\hline
+    & Type    &   Size &   Number & Activation   \\
+\hline
+  0 & conv\_2d &      3 &       32 & elu          \\
+  1 & conv\_2d &      3 &       32 & elu          \\
+  2 & conv\_2d &      3 &       32 & elu          \\
+  3 & conv\_2d &      3 &       32 & elu          \\
+\hline
+\end{tabular}\subsubsection*{LR-00001-P-17660-O-1008}
+Learning rate: 0.000100
+\\Parameters in image layer: 17660
+\\Size of output from image layer to LSTM: 1008
+\\\\\underline{Count of layers} 
+\\Conv 2D:           3\\Max pool 2D:      0\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrrl}
+\hline
+    & Type    &   Size &   Number & Activation   \\
+\hline
+  0 & conv\_2d &      3 &       32 & elu          \\
+  1 & conv\_2d &      3 &       32 & elu          \\
+  2 & conv\_2d &      3 &       28 & leaky\_relu   \\
+\hline
+\end{tabular}\subsubsection*{LR-00001-P-9568-O-1152}
+Learning rate: 0.000100
+\\Parameters in image layer: 9568
+\\Size of output from image layer to LSTM: 1152
+\\\\\underline{Count of layers} 
+\\Conv 2D:           2\\Max pool 2D:      1\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrll}
+\hline
+    & Type        &   Size & Number   & Activation   \\
+\hline
+  0 & conv\_2d     &      3 & 32       & elu          \\
+  1 & conv\_2d     &      3 & 32       & elu          \\
+  2 & max\_pool\_2d &      2 &          &              \\
+\hline
+\end{tabular}\subsubsection*{LR-0000691-P-11085-O-315}
+Learning rate: 0.000691
+\\Parameters in image layer: 11085
+\\Size of output from image layer to LSTM: 315
+\\\\\underline{Count of layers} 
+\\Conv 2D:           2\\Max pool 2D:      2\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrll}
+\hline
+    & Type        &   Size & Number   & Activation   \\
+\hline
+  0 & max\_pool\_2d &      2 &          &              \\
+  1 & conv\_2d     &      3 & 34       & leaky\_relu   \\
+  2 & conv\_2d     &      3 & 35       & elu          \\
+  3 & max\_pool\_2d &      2 &          &              \\
+\hline
+\end{tabular}\subsubsection*{LR-00001-P-40202-O-168}
+Learning rate: 0.000100
+\\Parameters in image layer: 40202
+\\Size of output from image layer to LSTM: 168
+\\\\\underline{Count of layers} 
+\\Conv 2D:           5\\Max pool 2D:      0\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrrl}
+\hline
+    & Type    &   Size &   Number & Activation   \\
+\hline
+  0 & conv\_2d &      3 &       32 & elu          \\
+  1 & conv\_2d &      3 &       32 & elu          \\
+  2 & conv\_2d &      3 &       32 & elu          \\
+  3 & conv\_2d &      3 &       32 & elu          \\
+  4 & conv\_2d &      3 &       42 & relu         \\
+\hline
+\end{tabular}\subsubsection*{LR-53e-05-P-8412-O-3388}
+Learning rate: 0.000053
+\\Parameters in image layer: 8412
+\\Size of output from image layer to LSTM: 3388
+\\\\\underline{Count of layers} 
+\\Conv 2D:           2\\Max pool 2D:      0\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrrl}
+\hline
+    & Type    &   Size &   Number & Activation   \\
+\hline
+  0 & conv\_2d &      3 &       32 & elu          \\
+  1 & conv\_2d &      3 &       28 & leaky\_relu   \\
+\hline
+\end{tabular}\subsubsection*{LR-00001-P-320-O-3872}
+Learning rate: 0.000100
+\\Parameters in image layer: 320
+\\Size of output from image layer to LSTM: 3872
+\\\\\underline{Count of layers} 
+\\Conv 2D:           1\\Max pool 2D:      1\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrll}
+\hline
+    & Type        &   Size & Number   & Activation   \\
+\hline
+  0 & conv\_2d     &      3 & 32       & elu          \\
+  1 & max\_pool\_2d &      2 &          &              \\
+\hline
+\end{tabular}\subsubsection*{LR-0000691-P-11085-O-140}
+Learning rate: 0.000691
+\\Parameters in image layer: 11085
+\\Size of output from image layer to LSTM: 140
+\\\\\underline{Count of layers} 
+\\Conv 2D:           2\\Max pool 2D:      3\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrll}
+\hline
+    & Type        &   Size & Number   & Activation   \\
+\hline
+  0 & max\_pool\_2d &      2 &          &              \\
+  1 & conv\_2d     &      3 & 34       & leaky\_relu   \\
+  2 & max\_pool\_2d &      2 &          &              \\
+  3 & conv\_2d     &      3 & 35       & elu          \\
+  4 & max\_pool\_2d &      2 &          &              \\
+\hline
+\end{tabular}\subsubsection*{LR-1e-06-P-30954-O-168}
+Learning rate: 0.000001
+\\Parameters in image layer: 30954
+\\Size of output from image layer to LSTM: 168
+\\\\\underline{Count of layers} 
+\\Conv 2D:           4\\Max pool 2D:      1\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrll}
+\hline
+    & Type        &   Size & Number   & Activation   \\
+\hline
+  0 & max\_pool\_2d &      2 &          &              \\
+  1 & conv\_2d     &      3 & 32       & elu          \\
+  2 & conv\_2d     &      3 & 32       & elu          \\
+  3 & conv\_2d     &      3 & 32       & elu          \\
+  4 & conv\_2d     &      3 & 42       & relu         \\
+\hline
+\end{tabular}\subsection{Generation 6}
+\subsubsection*{LR-00001-P-40202-O-168}
+Learning rate: 0.000100
+\\Parameters in image layer: 40202
+\\Size of output from image layer to LSTM: 168
+\\\\\underline{Count of layers} 
+\\Conv 2D:           5\\Max pool 2D:      0\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrrl}
+\hline
+    & Type    &   Size &   Number & Activation   \\
+\hline
+  0 & conv\_2d &      3 &       32 & elu          \\
+  1 & conv\_2d &      3 &       32 & elu          \\
+  2 & conv\_2d &      3 &       32 & elu          \\
+  3 & conv\_2d &      3 &       32 & elu          \\
+  4 & conv\_2d &      3 &       42 & relu         \\
+\hline
+\end{tabular}\subsubsection*{LR-00001-P-40202-O-168}
+Learning rate: 0.000100
+\\Parameters in image layer: 40202
+\\Size of output from image layer to LSTM: 168
+\\\\\underline{Count of layers} 
+\\Conv 2D:           5\\Max pool 2D:      0\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrrl}
+\hline
+    & Type    &   Size &   Number & Activation   \\
+\hline
+  0 & conv\_2d &      3 &       32 & elu          \\
+  1 & conv\_2d &      3 &       32 & elu          \\
+  2 & conv\_2d &      3 &       32 & elu          \\
+  3 & conv\_2d &      3 &       32 & elu          \\
+  4 & conv\_2d &      3 &       42 & relu         \\
+\hline
+\end{tabular}\subsubsection*{LR-0000691-P-8160-O-315}
+Learning rate: 0.000691
+\\Parameters in image layer: 8160
+\\Size of output from image layer to LSTM: 315
+\\\\\underline{Count of layers} 
+\\Conv 2D:           2\\Max pool 2D:      2\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrll}
+\hline
+    & Type        &   Size & Number   & Activation   \\
+\hline
+  0 & max\_pool\_2d &      2 &          &              \\
+  1 & conv\_2d     &      3 & 25       & leaky\_relu   \\
+  2 & conv\_2d     &      3 & 35       & elu          \\
+  3 & max\_pool\_2d &      2 &          &              \\
+\hline
+\end{tabular}\subsubsection*{LR-00001-P-18816-O-1152}
+Learning rate: 0.000100
+\\Parameters in image layer: 18816
+\\Size of output from image layer to LSTM: 1152
+\\\\\underline{Count of layers} 
+\\Conv 2D:           3\\Max pool 2D:      0\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrrl}
+\hline
+    & Type    &   Size &   Number & Activation   \\
+\hline
+  0 & conv\_2d &      3 &       32 & elu          \\
+  1 & conv\_2d &      3 &       32 & elu          \\
+  2 & conv\_2d &      3 &       32 & elu          \\
+\hline
+\end{tabular}\subsubsection*{LR-00001-P-48116-O-42}
+Learning rate: 0.000100
+\\Parameters in image layer: 48116
+\\Size of output from image layer to LSTM: 42
+\\\\\underline{Count of layers} 
+\\Conv 2D:           6\\Max pool 2D:      0\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrrl}
+\hline
+    & Type    &   Size &   Number & Activation   \\
+\hline
+  0 & conv\_2d &      3 &       32 & elu          \\
+  1 & conv\_2d &      3 &       32 & elu          \\
+  2 & conv\_2d &      3 &       32 & elu          \\
+  3 & conv\_2d &      3 &       32 & elu          \\
+  4 & conv\_2d &      3 &       30 & relu         \\
+  5 & conv\_2d &      3 &       42 & relu         \\
+\hline
+\end{tabular}\subsubsection*{LR-00001-P-36445-O-29}
+Learning rate: 0.000100
+\\Parameters in image layer: 36445
+\\Size of output from image layer to LSTM: 29
+\\\\\underline{Count of layers} 
+\\Conv 2D:           4\\Max pool 2D:      0\\Fully connected:  1
+\\\\Detailed layers of model: \\\begin{tabular}{rllrl}
+\hline
+    & Type       & Size   &   Number & Activation   \\
+\hline
+  0 & conv\_2d    & 3      &       32 & elu          \\
+  1 & conv\_2d    & 3      &       32 & elu          \\
+  2 & conv\_2d    & 3      &       32 & elu          \\
+  3 & conv\_2d    & 3      &       32 & elu          \\
+  4 & fully\_conn &        &       29 & relu         \\
+\hline
+\end{tabular}\subsubsection*{LR-1e-06-P-15220-O-140}
+Learning rate: 0.000001
+\\Parameters in image layer: 15220
+\\Size of output from image layer to LSTM: 140
+\\\\\underline{Count of layers} 
+\\Conv 2D:           3\\Max pool 2D:      2\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrll}
+\hline
+    & Type        &   Size & Number   & Activation   \\
+\hline
+  0 & conv\_2d     &      3 & 31       & leaky\_relu   \\
+  1 & max\_pool\_2d &      2 &          &              \\
+  2 & conv\_2d     &      3 & 25       & leaky\_relu   \\
+  3 & conv\_2d     &      3 & 35       & elu          \\
+  4 & max\_pool\_2d &      2 &          &              \\
+\hline
+\end{tabular}\subsubsection*{LR-0000119-P-70701-O-45}
+Learning rate: 0.000119
+\\Parameters in image layer: 70701
+\\Size of output from image layer to LSTM: 45
+\\\\\underline{Count of layers} 
+\\Conv 2D:           3\\Max pool 2D:      0\\Fully connected:  1
+\\\\Detailed layers of model: \\\begin{tabular}{rllrl}
+\hline
+    & Type       & Size   &   Number & Activation   \\
+\hline
+  0 & conv\_2d    & 3      &       32 & elu          \\
+  1 & conv\_2d    & 3      &       32 & elu          \\
+  2 & conv\_2d    & 3      &       32 & elu          \\
+  3 & fully\_conn &        &       45 & sigmoid      \\
+\hline
+\end{tabular}\subsubsection*{LR-00001-P-55040-O-42}
+Learning rate: 0.000100
+\\Parameters in image layer: 55040
+\\Size of output from image layer to LSTM: 42
+\\\\\underline{Count of layers} 
+\\Conv 2D:           6\\Max pool 2D:      0\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrrl}
+\hline
+    & Type    &   Size &   Number & Activation   \\
+\hline
+  0 & conv\_2d &      3 &       32 & elu          \\
+  1 & conv\_2d &      3 &       44 & relu         \\
+  2 & conv\_2d &      3 &       32 & elu          \\
+  3 & conv\_2d &      3 &       32 & elu          \\
+  4 & conv\_2d &      3 &       30 & relu         \\
+  5 & conv\_2d &      3 &       42 & relu         \\
+\hline
+\end{tabular}\subsubsection*{LR-00001-P-43045-O-29}
+Learning rate: 0.000100
+\\Parameters in image layer: 43045
+\\Size of output from image layer to LSTM: 29
+\\\\\underline{Count of layers} 
+\\Conv 2D:           4\\Max pool 2D:      0\\Fully connected:  1
+\\\\Detailed layers of model: \\\begin{tabular}{rllrl}
+\hline
+    & Type       & Size   &   Number & Activation   \\
+\hline
+  0 & conv\_2d    & 3      &       32 & elu          \\
+  1 & conv\_2d    & 3      &       32 & elu          \\
+  2 & conv\_2d    & 3      &       32 & elu          \\
+  3 & conv\_2d    & 3      &       44 & elu          \\
+  4 & fully\_conn &        &       29 & relu         \\
+\hline
+\end{tabular}\subsubsection*{LR-2e-06-P-25415-O-35}
+Learning rate: 0.000002
+\\Parameters in image layer: 25415
+\\Size of output from image layer to LSTM: 35
+\\\\\underline{Count of layers} 
+\\Conv 2D:           4\\Max pool 2D:      2\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrll}
+\hline
+    & Type        &   Size & Number   & Activation   \\
+\hline
+  0 & conv\_2d     &      3 & 31       & leaky\_relu   \\
+  1 & conv\_2d     &      3 & 34       & leaky\_relu   \\
+  2 & max\_pool\_2d &      2 &          &              \\
+  3 & conv\_2d     &      3 & 25       & leaky\_relu   \\
+  4 & conv\_2d     &      3 & 35       & elu          \\
+  5 & max\_pool\_2d &      2 &          &              \\
+\hline
+\end{tabular}\subsubsection*{LR-0000119-P-91700-O-45}
+Learning rate: 0.000119
+\\Parameters in image layer: 91700
+\\Size of output from image layer to LSTM: 45
+\\\\\underline{Count of layers} 
+\\Conv 2D:           3\\Max pool 2D:      0\\Fully connected:  1
+\\\\Detailed layers of model: \\\begin{tabular}{rllrl}
+\hline
+    & Type       & Size   &   Number & Activation   \\
+\hline
+  0 & conv\_2d    & 3      &       32 & elu          \\
+  1 & conv\_2d    & 3      &       32 & elu          \\
+  2 & conv\_2d    & 3      &       43 & elu          \\
+  3 & fully\_conn &        &       45 & sigmoid      \\
+\hline
+\end{tabular}\subsection{Generation 7}
+\subsubsection*{LR-0000119-P-70701-O-45}
+Learning rate: 0.000119
+\\Parameters in image layer: 70701
+\\Size of output from image layer to LSTM: 45
+\\\\\underline{Count of layers} 
+\\Conv 2D:           3\\Max pool 2D:      0\\Fully connected:  1
+\\\\Detailed layers of model: \\\begin{tabular}{rllrl}
+\hline
+    & Type       & Size   &   Number & Activation   \\
+\hline
+  0 & conv\_2d    & 3      &       32 & elu          \\
+  1 & conv\_2d    & 3      &       32 & elu          \\
+  2 & conv\_2d    & 3      &       32 & elu          \\
+  3 & fully\_conn &        &       45 & sigmoid      \\
+\hline
+\end{tabular}\subsubsection*{LR-0000119-P-91700-O-45}
+Learning rate: 0.000119
+\\Parameters in image layer: 91700
+\\Size of output from image layer to LSTM: 45
+\\\\\underline{Count of layers} 
+\\Conv 2D:           3\\Max pool 2D:      0\\Fully connected:  1
+\\\\Detailed layers of model: \\\begin{tabular}{rllrl}
+\hline
+    & Type       & Size   &   Number & Activation   \\
+\hline
+  0 & conv\_2d    & 3      &       32 & elu          \\
+  1 & conv\_2d    & 3      &       32 & elu          \\
+  2 & conv\_2d    & 3      &       43 & elu          \\
+  3 & fully\_conn &        &       45 & sigmoid      \\
+\hline
+\end{tabular}\subsubsection*{LR-00001-P-18816-O-1152}
+Learning rate: 0.000100
+\\Parameters in image layer: 18816
+\\Size of output from image layer to LSTM: 1152
+\\\\\underline{Count of layers} 
+\\Conv 2D:           3\\Max pool 2D:      0\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrrl}
+\hline
+    & Type    &   Size &   Number & Activation   \\
+\hline
+  0 & conv\_2d &      3 &       32 & elu          \\
+  1 & conv\_2d &      3 &       32 & elu          \\
+  2 & conv\_2d &      3 &       32 & elu          \\
+\hline
+\end{tabular}\subsubsection*{LR-0000691-P-8160-O-315}
+Learning rate: 0.000691
+\\Parameters in image layer: 8160
+\\Size of output from image layer to LSTM: 315
+\\\\\underline{Count of layers} 
+\\Conv 2D:           2\\Max pool 2D:      2\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrll}
+\hline
+    & Type        &   Size & Number   & Activation   \\
+\hline
+  0 & max\_pool\_2d &      2 &          &              \\
+  1 & conv\_2d     &      3 & 25       & leaky\_relu   \\
+  2 & conv\_2d     &      3 & 35       & elu          \\
+  3 & max\_pool\_2d &      2 &          &              \\
+\hline
+\end{tabular}\subsubsection*{LR-1e-06-P-183853-O-45}
+Learning rate: 0.000001
+\\Parameters in image layer: 183853
+\\Size of output from image layer to LSTM: 45
+\\\\\underline{Count of layers} 
+\\Conv 2D:           2\\Max pool 2D:      0\\Fully connected:  1
+\\\\Detailed layers of model: \\\begin{tabular}{rllrl}
+\hline
+    & Type       & Size   &   Number & Activation   \\
+\hline
+  0 & conv\_2d    & 3      &       32 & elu          \\
+  1 & conv\_2d    & 3      &       32 & elu          \\
+  2 & fully\_conn &        &       45 & sigmoid      \\
+\hline
+\end{tabular}\subsubsection*{LR-0000388-P-93724-O-44}
+Learning rate: 0.000388
+\\Parameters in image layer: 93724
+\\Size of output from image layer to LSTM: 44
+\\\\\underline{Count of layers} 
+\\Conv 2D:           3\\Max pool 2D:      0\\Fully connected:  2
+\\\\Detailed layers of model: \\\begin{tabular}{rllrl}
+\hline
+    & Type       & Size   &   Number & Activation   \\
+\hline
+  0 & conv\_2d    & 3      &       32 & elu          \\
+  1 & conv\_2d    & 3      &       32 & elu          \\
+  2 & conv\_2d    & 3      &       43 & elu          \\
+  3 & fully\_conn &        &       45 & sigmoid      \\
+  4 & fully\_conn &        &       44 & sigmoid      \\
+\hline
+\end{tabular}\subsubsection*{LR-4e-06-P-15354-O-1152}
+Learning rate: 0.000004
+\\Parameters in image layer: 15354
+\\Size of output from image layer to LSTM: 1152
+\\\\\underline{Count of layers} 
+\\Conv 2D:           3\\Max pool 2D:      0\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrrl}
+\hline
+    & Type    &   Size &   Number & Activation   \\
+\hline
+  0 & conv\_2d &      3 &       32 & elu          \\
+  1 & conv\_2d &      3 &       26 & elu          \\
+  2 & conv\_2d &      3 &       32 & elu          \\
+\hline
+\end{tabular}\subsubsection*{LR-1e-06-P-350-O-315}
+Learning rate: 0.000001
+\\Parameters in image layer: 350
+\\Size of output from image layer to LSTM: 315
+\\\\\underline{Count of layers} 
+\\Conv 2D:           1\\Max pool 2D:      3\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrll}
+\hline
+    & Type        &   Size & Number   & Activation   \\
+\hline
+  0 & max\_pool\_2d &      2 &          &              \\
+  1 & max\_pool\_2d &      2 &          &              \\
+  2 & conv\_2d     &      3 & 35       & elu          \\
+  3 & max\_pool\_2d &      2 &          &              \\
+\hline
+\end{tabular}\subsubsection*{LR-1e-06-P-185003-O-25}
+Learning rate: 0.000001
+\\Parameters in image layer: 185003
+\\Size of output from image layer to LSTM: 25
+\\\\\underline{Count of layers} 
+\\Conv 2D:           2\\Max pool 2D:      0\\Fully connected:  2
+\\\\Detailed layers of model: \\\begin{tabular}{rllrl}
+\hline
+    & Type       & Size   &   Number & Activation   \\
+\hline
+  0 & conv\_2d    & 3      &       32 & elu          \\
+  1 & conv\_2d    & 3      &       32 & elu          \\
+  2 & fully\_conn &        &       45 & sigmoid      \\
+  3 & fully\_conn &        &       25 & relu         \\
+\hline
+\end{tabular}\subsubsection*{LR-0000332-P-79387-O-44}
+Learning rate: 0.000332
+\\Parameters in image layer: 79387
+\\Size of output from image layer to LSTM: 44
+\\\\\underline{Count of layers} 
+\\Conv 2D:           3\\Max pool 2D:      0\\Fully connected:  2
+\\\\Detailed layers of model: \\\begin{tabular}{rllrl}
+\hline
+    & Type       & Size   &   Number & Activation   \\
+\hline
+  0 & conv\_2d    & 3      &       32 & elu          \\
+  1 & conv\_2d    & 3      &       32 & elu          \\
+  2 & conv\_2d    & 3      &       43 & elu          \\
+  3 & fully\_conn &        &       36 & elu          \\
+  4 & fully\_conn &        &       44 & sigmoid      \\
+\hline
+\end{tabular}\subsubsection*{LR-4e-06-P-14378-O-1152}
+Learning rate: 0.000004
+\\Parameters in image layer: 14378
+\\Size of output from image layer to LSTM: 1152
+\\\\\underline{Count of layers} 
+\\Conv 2D:           3\\Max pool 2D:      0\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrrl}
+\hline
+    & Type    &   Size &   Number & Activation   \\
+\hline
+  0 & conv\_2d &      3 &       28 & relu         \\
+  1 & conv\_2d &      3 &       26 & elu          \\
+  2 & conv\_2d &      3 &       32 & elu          \\
+\hline
+\end{tabular}\subsubsection*{LR-1e-06-P-350-O-315}
+Learning rate: 0.000001
+\\Parameters in image layer: 350
+\\Size of output from image layer to LSTM: 315
+\\\\\underline{Count of layers} 
+\\Conv 2D:           1\\Max pool 2D:      3\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrll}
+\hline
+    & Type        &   Size & Number   & Activation   \\
+\hline
+  0 & max\_pool\_2d &      2 &          &              \\
+  1 & max\_pool\_2d &      2 &          &              \\
+  2 & conv\_2d     &      3 & 35       & elu          \\
+  3 & max\_pool\_2d &      2 &          &              \\
+\hline
+\end{tabular}\subsection{Generation 8}
+\subsubsection*{LR-00001-P-18816-O-1152}
+Learning rate: 0.000100
+\\Parameters in image layer: 18816
+\\Size of output from image layer to LSTM: 1152
+\\\\\underline{Count of layers} 
+\\Conv 2D:           3\\Max pool 2D:      0\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrrl}
+\hline
+    & Type    &   Size &   Number & Activation   \\
+\hline
+  0 & conv\_2d &      3 &       32 & elu          \\
+  1 & conv\_2d &      3 &       32 & elu          \\
+  2 & conv\_2d &      3 &       32 & elu          \\
+\hline
+\end{tabular}\subsubsection*{LR-0000119-P-70701-O-45}
+Learning rate: 0.000119
+\\Parameters in image layer: 70701
+\\Size of output from image layer to LSTM: 45
+\\\\\underline{Count of layers} 
+\\Conv 2D:           3\\Max pool 2D:      0\\Fully connected:  1
+\\\\Detailed layers of model: \\\begin{tabular}{rllrl}
+\hline
+    & Type       & Size   &   Number & Activation   \\
+\hline
+  0 & conv\_2d    & 3      &       32 & elu          \\
+  1 & conv\_2d    & 3      &       32 & elu          \\
+  2 & conv\_2d    & 3      &       32 & elu          \\
+  3 & fully\_conn &        &       45 & sigmoid      \\
+\hline
+\end{tabular}\subsubsection*{LR-0000691-P-8160-O-315}
+Learning rate: 0.000691
+\\Parameters in image layer: 8160
+\\Size of output from image layer to LSTM: 315
+\\\\\underline{Count of layers} 
+\\Conv 2D:           2\\Max pool 2D:      2\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrll}
+\hline
+    & Type        &   Size & Number   & Activation   \\
+\hline
+  0 & max\_pool\_2d &      2 &          &              \\
+  1 & conv\_2d     &      3 & 25       & leaky\_relu   \\
+  2 & conv\_2d     &      3 & 35       & elu          \\
+  3 & max\_pool\_2d &      2 &          &              \\
+\hline
+\end{tabular}\subsubsection*{LR-0000388-P-93724-O-44}
+Learning rate: 0.000388
+\\Parameters in image layer: 93724
+\\Size of output from image layer to LSTM: 44
+\\\\\underline{Count of layers} 
+\\Conv 2D:           3\\Max pool 2D:      0\\Fully connected:  2
+\\\\Detailed layers of model: \\\begin{tabular}{rllrl}
+\hline
+    & Type       & Size   &   Number & Activation   \\
+\hline
+  0 & conv\_2d    & 3      &       32 & elu          \\
+  1 & conv\_2d    & 3      &       32 & elu          \\
+  2 & conv\_2d    & 3      &       43 & elu          \\
+  3 & fully\_conn &        &       45 & sigmoid      \\
+  4 & fully\_conn &        &       44 & sigmoid      \\
+\hline
+\end{tabular}\subsubsection*{LR-00001-P-9568-O-3872}
+Learning rate: 0.000100
+\\Parameters in image layer: 9568
+\\Size of output from image layer to LSTM: 3872
+\\\\\underline{Count of layers} 
+\\Conv 2D:           2\\Max pool 2D:      0\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrrl}
+\hline
+    & Type    &   Size &   Number & Activation   \\
+\hline
+  0 & conv\_2d &      3 &       32 & elu          \\
+  1 & conv\_2d &      3 &       32 & elu          \\
+\hline
+\end{tabular}\subsubsection*{LR-0000105-P-87882-O-45}
+Learning rate: 0.000105
+\\Parameters in image layer: 87882
+\\Size of output from image layer to LSTM: 45
+\\\\\underline{Count of layers} 
+\\Conv 2D:           3\\Max pool 2D:      0\\Fully connected:  1
+\\\\Detailed layers of model: \\\begin{tabular}{rllrl}
+\hline
+    & Type       & Size   &   Number & Activation   \\
+\hline
+  0 & conv\_2d    & 3      &       32 & elu          \\
+  1 & conv\_2d    & 3      &       32 & elu          \\
+  2 & conv\_2d    & 3      &       41 & relu         \\
+  3 & fully\_conn &        &       45 & sigmoid      \\
+\hline
+\end{tabular}\subsubsection*{LR-0000691-P-23012-O-188}
+Learning rate: 0.000691
+\\Parameters in image layer: 23012
+\\Size of output from image layer to LSTM: 188
+\\\\\underline{Count of layers} 
+\\Conv 2D:           3\\Max pool 2D:      2\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrll}
+\hline
+    & Type        &   Size & Number   & Activation   \\
+\hline
+  0 & max\_pool\_2d &      2 &          &              \\
+  1 & conv\_2d     &      3 & 25       & leaky\_relu   \\
+  2 & conv\_2d     &      3 & 35       & elu          \\
+  3 & conv\_2d     &      3 & 47       & relu         \\
+  4 & max\_pool\_2d &      2 &          &              \\
+\hline
+\end{tabular}\subsubsection*{LR-0000986-P-84476-O-44}
+Learning rate: 0.000986
+\\Parameters in image layer: 84476
+\\Size of output from image layer to LSTM: 44
+\\\\\underline{Count of layers} 
+\\Conv 2D:           2\\Max pool 2D:      1\\Fully connected:  2
+\\\\Detailed layers of model: \\\begin{tabular}{rllll}
+\hline
+    & Type        & Size   & Number   & Activation   \\
+\hline
+  0 & conv\_2d     & 3      & 32       & elu          \\
+  1 & max\_pool\_2d & 2      &          &              \\
+  2 & conv\_2d     & 3      & 43       & elu          \\
+  3 & fully\_conn  &        & 45       & sigmoid      \\
+  4 & fully\_conn  &        & 44       & sigmoid      \\
+\hline
+\end{tabular}\subsubsection*{LR-00001-P-320-O-3872}
+Learning rate: 0.000100
+\\Parameters in image layer: 320
+\\Size of output from image layer to LSTM: 3872
+\\\\\underline{Count of layers} 
+\\Conv 2D:           1\\Max pool 2D:      1\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrll}
+\hline
+    & Type        &   Size & Number   & Activation   \\
+\hline
+  0 & conv\_2d     &      3 & 32       & elu          \\
+  1 & max\_pool\_2d &      2 &          &              \\
+\hline
+\end{tabular}\subsubsection*{LR-0000105-P-21417-O-1476}
+Learning rate: 0.000105
+\\Parameters in image layer: 21417
+\\Size of output from image layer to LSTM: 1476
+\\\\\underline{Count of layers} 
+\\Conv 2D:           3\\Max pool 2D:      0\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrrl}
+\hline
+    & Type    &   Size &   Number & Activation   \\
+\hline
+  0 & conv\_2d &      3 &       32 & elu          \\
+  1 & conv\_2d &      3 &       32 & elu          \\
+  2 & conv\_2d &      3 &       41 & relu         \\
+\hline
+\end{tabular}\subsubsection*{LR-0001635-P-37852-O-35}
+Learning rate: 0.001635
+\\Parameters in image layer: 37852
+\\Size of output from image layer to LSTM: 35
+\\\\\underline{Count of layers} 
+\\Conv 2D:           3\\Max pool 2D:      1\\Fully connected:  1
+\\\\Detailed layers of model: \\\begin{tabular}{rllll}
+\hline
+    & Type        & Size   & Number   & Activation   \\
+\hline
+  0 & max\_pool\_2d & 2      &          &              \\
+  1 & conv\_2d     & 3      & 25       & leaky\_relu   \\
+  2 & conv\_2d     & 3      & 35       & elu          \\
+  3 & conv\_2d     & 3      & 47       & relu         \\
+  4 & fully\_conn  &        & 35       & sigmoid      \\
+\hline
+\end{tabular}\subsubsection*{LR-0000986-P-91020-O-44}
+Learning rate: 0.000986
+\\Parameters in image layer: 91020
+\\Size of output from image layer to LSTM: 44
+\\\\\underline{Count of layers} 
+\\Conv 2D:           3\\Max pool 2D:      0\\Fully connected:  2
+\\\\Detailed layers of model: \\\begin{tabular}{rllrl}
+\hline
+    & Type       & Size   &   Number & Activation   \\
+\hline
+  0 & conv\_2d    & 3      &       32 & elu          \\
+  1 & conv\_2d    & 3      &       28 & relu         \\
+  2 & conv\_2d    & 3      &       43 & elu          \\
+  3 & fully\_conn &        &       45 & sigmoid      \\
+  4 & fully\_conn &        &       44 & sigmoid      \\
+\hline
+\end{tabular}\subsection{Generation 9}
+\subsubsection*{LR-0000691-P-8160-O-315}
+Learning rate: 0.000691
+\\Parameters in image layer: 8160
+\\Size of output from image layer to LSTM: 315
+\\\\\underline{Count of layers} 
+\\Conv 2D:           2\\Max pool 2D:      2\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrll}
+\hline
+    & Type        &   Size & Number   & Activation   \\
+\hline
+  0 & max\_pool\_2d &      2 &          &              \\
+  1 & conv\_2d     &      3 & 25       & leaky\_relu   \\
+  2 & conv\_2d     &      3 & 35       & elu          \\
+  3 & max\_pool\_2d &      2 &          &              \\
+\hline
+\end{tabular}\subsubsection*{LR-0000691-P-23012-O-188}
+Learning rate: 0.000691
+\\Parameters in image layer: 23012
+\\Size of output from image layer to LSTM: 188
+\\\\\underline{Count of layers} 
+\\Conv 2D:           3\\Max pool 2D:      2\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrll}
+\hline
+    & Type        &   Size & Number   & Activation   \\
+\hline
+  0 & max\_pool\_2d &      2 &          &              \\
+  1 & conv\_2d     &      3 & 25       & leaky\_relu   \\
+  2 & conv\_2d     &      3 & 35       & elu          \\
+  3 & conv\_2d     &      3 & 47       & relu         \\
+  4 & max\_pool\_2d &      2 &          &              \\
+\hline
+\end{tabular}\subsubsection*{LR-0000691-P-23012-O-188}
+Learning rate: 0.000691
+\\Parameters in image layer: 23012
+\\Size of output from image layer to LSTM: 188
+\\\\\underline{Count of layers} 
+\\Conv 2D:           3\\Max pool 2D:      2\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrll}
+\hline
+    & Type        &   Size & Number   & Activation   \\
+\hline
+  0 & max\_pool\_2d &      2 &          &              \\
+  1 & conv\_2d     &      3 & 25       & leaky\_relu   \\
+  2 & conv\_2d     &      3 & 35       & elu          \\
+  3 & conv\_2d     &      3 & 47       & relu         \\
+  4 & max\_pool\_2d &      2 &          &              \\
+\hline
+\end{tabular}\subsubsection*{LR-0000105-P-21417-O-1476}
+Learning rate: 0.000105
+\\Parameters in image layer: 21417
+\\Size of output from image layer to LSTM: 1476
+\\\\\underline{Count of layers} 
+\\Conv 2D:           3\\Max pool 2D:      0\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrrl}
+\hline
+    & Type    &   Size &   Number & Activation   \\
+\hline
+  0 & conv\_2d &      3 &       32 & elu          \\
+  1 & conv\_2d &      3 &       32 & elu          \\
+  2 & conv\_2d &      3 &       41 & relu         \\
+\hline
+\end{tabular}\subsubsection*{LR-0000691-P-8160-O-1260}
+Learning rate: 0.000691
+\\Parameters in image layer: 8160
+\\Size of output from image layer to LSTM: 1260
+\\\\\underline{Count of layers} 
+\\Conv 2D:           2\\Max pool 2D:      1\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrll}
+\hline
+    & Type        &   Size & Number   & Activation   \\
+\hline
+  0 & conv\_2d     &      3 & 25       & leaky\_relu   \\
+  1 & conv\_2d     &      3 & 35       & elu          \\
+  2 & max\_pool\_2d &      2 &          &              \\
+\hline
+\end{tabular}\subsubsection*{LR-0001602-P-10872-O-188}
+Learning rate: 0.001602
+\\Parameters in image layer: 10872
+\\Size of output from image layer to LSTM: 188
+\\\\\underline{Count of layers} 
+\\Conv 2D:           2\\Max pool 2D:      3\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrll}
+\hline
+    & Type        &   Size & Number   & Activation   \\
+\hline
+  0 & max\_pool\_2d &      2 &          &              \\
+  1 & conv\_2d     &      3 & 25       & leaky\_relu   \\
+  2 & max\_pool\_2d &      2 &          &              \\
+  3 & conv\_2d     &      3 & 47       & relu         \\
+  4 & max\_pool\_2d &      2 &          &              \\
+\hline
+\end{tabular}\subsubsection*{LR-0000471-P-28427-O-188}
+Learning rate: 0.000471
+\\Parameters in image layer: 28427
+\\Size of output from image layer to LSTM: 188
+\\\\\underline{Count of layers} 
+\\Conv 2D:           4\\Max pool 2D:      1\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrll}
+\hline
+    & Type        &   Size & Number   & Activation   \\
+\hline
+  0 & conv\_2d     &      3 & 24       & leaky\_relu   \\
+  1 & conv\_2d     &      3 & 25       & leaky\_relu   \\
+  2 & conv\_2d     &      3 & 35       & elu          \\
+  3 & conv\_2d     &      3 & 47       & relu         \\
+  4 & max\_pool\_2d &      2 &          &              \\
+\hline
+\end{tabular}\subsubsection*{LR-0000105-P-21995-O-1548}
+Learning rate: 0.000105
+\\Parameters in image layer: 21995
+\\Size of output from image layer to LSTM: 1548
+\\\\\underline{Count of layers} 
+\\Conv 2D:           3\\Max pool 2D:      0\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrrl}
+\hline
+    & Type    &   Size &   Number & Activation   \\
+\hline
+  0 & conv\_2d &      3 &       32 & elu          \\
+  1 & conv\_2d &      3 &       32 & elu          \\
+  2 & conv\_2d &      3 &       43 & elu          \\
+\hline
+\end{tabular}\subsubsection*{LR-0000727-P-20800-O-360}
+Learning rate: 0.000727
+\\Parameters in image layer: 20800
+\\Size of output from image layer to LSTM: 360
+\\\\\underline{Count of layers} 
+\\Conv 2D:           3\\Max pool 2D:      1\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrll}
+\hline
+    & Type        &   Size & Number   & Activation   \\
+\hline
+  0 & conv\_2d     &      3 & 25       & leaky\_relu   \\
+  1 & conv\_2d     &      3 & 35       & elu          \\
+  2 & conv\_2d     &      3 & 40       & relu         \\
+  3 & max\_pool\_2d &      2 &          &              \\
+\hline
+\end{tabular}\subsubsection*{LR-0001602-P-10872-O-188}
+Learning rate: 0.001602
+\\Parameters in image layer: 10872
+\\Size of output from image layer to LSTM: 188
+\\\\\underline{Count of layers} 
+\\Conv 2D:           2\\Max pool 2D:      3\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrll}
+\hline
+    & Type        &   Size & Number   & Activation   \\
+\hline
+  0 & max\_pool\_2d &      2 &          &              \\
+  1 & conv\_2d     &      3 & 25       & leaky\_relu   \\
+  2 & max\_pool\_2d &      2 &          &              \\
+  3 & conv\_2d     &      3 & 47       & relu         \\
+  4 & max\_pool\_2d &      2 &          &              \\
+\hline
+\end{tabular}\subsubsection*{LR-1e-06-P-42419-O-132}
+Learning rate: 0.000001
+\\Parameters in image layer: 42419
+\\Size of output from image layer to LSTM: 132
+\\\\\underline{Count of layers} 
+\\Conv 2D:           5\\Max pool 2D:      0\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrrl}
+\hline
+    & Type    &   Size &   Number & Activation   \\
+\hline
+  0 & conv\_2d &      3 &       24 & leaky\_relu   \\
+  1 & conv\_2d &      3 &       25 & leaky\_relu   \\
+  2 & conv\_2d &      3 &       35 & elu          \\
+  3 & conv\_2d &      3 &       47 & relu         \\
+  4 & conv\_2d &      3 &       33 & relu         \\
+\hline
+\end{tabular}\subsubsection*{LR-0000267-P-18615-O-1548}
+Learning rate: 0.000267
+\\Parameters in image layer: 18615
+\\Size of output from image layer to LSTM: 1548
+\\\\\underline{Count of layers} 
+\\Conv 2D:           3\\Max pool 2D:      0\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrrl}
+\hline
+    & Type    &   Size &   Number & Activation   \\
+\hline
+  0 & conv\_2d &      3 &       32 & elu          \\
+  1 & conv\_2d &      3 &       27 & relu         \\
+  2 & conv\_2d &      3 &       43 & elu          \\
+\hline
+\end{tabular}\subsection{Generation 10}
+\subsubsection*{LR-0000471-P-28427-O-188}
+Learning rate: 0.000471
+\\Parameters in image layer: 28427
+\\Size of output from image layer to LSTM: 188
+\\\\\underline{Count of layers} 
+\\Conv 2D:           4\\Max pool 2D:      1\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrll}
+\hline
+    & Type        &   Size & Number   & Activation   \\
+\hline
+  0 & conv\_2d     &      3 & 24       & leaky\_relu   \\
+  1 & conv\_2d     &      3 & 25       & leaky\_relu   \\
+  2 & conv\_2d     &      3 & 35       & elu          \\
+  3 & conv\_2d     &      3 & 47       & relu         \\
+  4 & max\_pool\_2d &      2 &          &              \\
+\hline
+\end{tabular}\subsubsection*{LR-0000471-P-28427-O-188}
+Learning rate: 0.000471
+\\Parameters in image layer: 28427
+\\Size of output from image layer to LSTM: 188
+\\\\\underline{Count of layers} 
+\\Conv 2D:           4\\Max pool 2D:      1\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrll}
+\hline
+    & Type        &   Size & Number   & Activation   \\
+\hline
+  0 & conv\_2d     &      3 & 24       & leaky\_relu   \\
+  1 & conv\_2d     &      3 & 25       & leaky\_relu   \\
+  2 & conv\_2d     &      3 & 35       & elu          \\
+  3 & conv\_2d     &      3 & 47       & relu         \\
+  4 & max\_pool\_2d &      2 &          &              \\
+\hline
+\end{tabular}\subsubsection*{LR-0000105-P-21995-O-1548}
+Learning rate: 0.000105
+\\Parameters in image layer: 21995
+\\Size of output from image layer to LSTM: 1548
+\\\\\underline{Count of layers} 
+\\Conv 2D:           3\\Max pool 2D:      0\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrrl}
+\hline
+    & Type    &   Size &   Number & Activation   \\
+\hline
+  0 & conv\_2d &      3 &       32 & elu          \\
+  1 & conv\_2d &      3 &       32 & elu          \\
+  2 & conv\_2d &      3 &       43 & elu          \\
+\hline
+\end{tabular}\subsubsection*{LR-0000105-P-21995-O-1548}
+Learning rate: 0.000105
+\\Parameters in image layer: 21995
+\\Size of output from image layer to LSTM: 1548
+\\\\\underline{Count of layers} 
+\\Conv 2D:           3\\Max pool 2D:      0\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrrl}
+\hline
+    & Type    &   Size &   Number & Activation   \\
+\hline
+  0 & conv\_2d &      3 &       32 & elu          \\
+  1 & conv\_2d &      3 &       32 & elu          \\
+  2 & conv\_2d &      3 &       43 & elu          \\
+\hline
+\end{tabular}\subsubsection*{LR-0000471-P-13575-O-140}
+Learning rate: 0.000471
+\\Parameters in image layer: 13575
+\\Size of output from image layer to LSTM: 140
+\\\\\underline{Count of layers} 
+\\Conv 2D:           3\\Max pool 2D:      2\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrll}
+\hline
+    & Type        &   Size & Number   & Activation   \\
+\hline
+  0 & conv\_2d     &      3 & 24       & leaky\_relu   \\
+  1 & conv\_2d     &      3 & 25       & leaky\_relu   \\
+  2 & conv\_2d     &      3 & 35       & elu          \\
+  3 & max\_pool\_2d &      2 &          &              \\
+  4 & max\_pool\_2d &      2 &          &              \\
+\hline
+\end{tabular}\subsubsection*{LR-0000471-P-22687-O-423}
+Learning rate: 0.000471
+\\Parameters in image layer: 22687
+\\Size of output from image layer to LSTM: 423
+\\\\\underline{Count of layers} 
+\\Conv 2D:           3\\Max pool 2D:      1\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrll}
+\hline
+    & Type        &   Size & Number   & Activation   \\
+\hline
+  0 & conv\_2d     &      3 & 24       & leaky\_relu   \\
+  1 & conv\_2d     &      3 & 35       & elu          \\
+  2 & conv\_2d     &      3 & 47       & relu         \\
+  3 & max\_pool\_2d &      2 &          &              \\
+\hline
+\end{tabular}\subsubsection*{LR-0000162-P-9568-O-3872}
+Learning rate: 0.000162
+\\Parameters in image layer: 9568
+\\Size of output from image layer to LSTM: 3872
+\\\\\underline{Count of layers} 
+\\Conv 2D:           2\\Max pool 2D:      0\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrrl}
+\hline
+    & Type    &   Size &   Number & Activation   \\
+\hline
+  0 & conv\_2d &      3 &       32 & elu          \\
+  1 & conv\_2d &      3 &       32 & elu          \\
+\hline
+\end{tabular}\subsubsection*{LR-0000105-P-9568-O-3872}
+Learning rate: 0.000105
+\\Parameters in image layer: 9568
+\\Size of output from image layer to LSTM: 3872
+\\\\\underline{Count of layers} 
+\\Conv 2D:           2\\Max pool 2D:      0\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrrl}
+\hline
+    & Type    &   Size &   Number & Activation   \\
+\hline
+  0 & conv\_2d &      3 &       32 & elu          \\
+  1 & conv\_2d &      3 &       32 & elu          \\
+\hline
+\end{tabular}\subsubsection*{LR-0000471-P-7835-O-315}
+Learning rate: 0.000471
+\\Parameters in image layer: 7835
+\\Size of output from image layer to LSTM: 315
+\\\\\underline{Count of layers} 
+\\Conv 2D:           2\\Max pool 2D:      2\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrll}
+\hline
+    & Type        &   Size & Number   & Activation   \\
+\hline
+  0 & conv\_2d     &      3 & 24       & leaky\_relu   \\
+  1 & conv\_2d     &      3 & 35       & elu          \\
+  2 & max\_pool\_2d &      2 &          &              \\
+  3 & max\_pool\_2d &      2 &          &              \\
+\hline
+\end{tabular}\subsubsection*{LR-0000471-P-32269-O-188}
+Learning rate: 0.000471
+\\Parameters in image layer: 32269
+\\Size of output from image layer to LSTM: 188
+\\\\\underline{Count of layers} 
+\\Conv 2D:           4\\Max pool 2D:      1\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrll}
+\hline
+    & Type        &   Size & Number   & Activation   \\
+\hline
+  0 & conv\_2d     &      3 & 24       & leaky\_relu   \\
+  1 & conv\_2d     &      3 & 35       & elu          \\
+  2 & conv\_2d     &      3 & 33       & relu         \\
+  3 & conv\_2d     &      3 & 47       & relu         \\
+  4 & max\_pool\_2d &      2 &          &              \\
+\hline
+\end{tabular}\subsubsection*{LR-000025-P-16508-O-1152}
+Learning rate: 0.000250
+\\Parameters in image layer: 16508
+\\Size of output from image layer to LSTM: 1152
+\\\\\underline{Count of layers} 
+\\Conv 2D:           3\\Max pool 2D:      0\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrrl}
+\hline
+    & Type    &   Size &   Number & Activation   \\
+\hline
+  0 & conv\_2d &      3 &       32 & elu          \\
+  1 & conv\_2d &      3 &       28 & leaky\_relu   \\
+  2 & conv\_2d &      3 &       32 & elu          \\
+\hline
+\end{tabular}\subsubsection*{LR-1e-06-P-11591-O-4719}
+Learning rate: 0.000001
+\\Parameters in image layer: 11591
+\\Size of output from image layer to LSTM: 4719
+\\\\\underline{Count of layers} 
+\\Conv 2D:           2\\Max pool 2D:      0\\Fully connected:  0
+\\\\Detailed layers of model: \\\begin{tabular}{rlrrl}
+\hline
+    & Type    &   Size &   Number & Activation   \\
+\hline
+  0 & conv\_2d &      3 &       32 & elu          \\
+  1 & conv\_2d &      3 &       39 & elu          \\
+\hline
+\end{tabular}

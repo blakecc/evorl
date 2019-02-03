@@ -76,7 +76,7 @@ def linear(x, size, name, initializer=None, bias_init=0):
     return tf.matmul(x, w) + b
 
 def categorical_sample(logits, d):
-    value = tf.squeeze(tf.multinomial(logits - tf.reduce_max(logits, [1], keep_dims=True), 1), [1])
+    value = tf.squeeze(tf.multinomial(logits - tf.reduce_max(logits, [1], keepdims=True), 1), [1])
     return tf.one_hot(value, d)
 
 def activation_function(chromosome_layer_activation_name, net):

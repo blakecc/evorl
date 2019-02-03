@@ -90,7 +90,7 @@ def create_commands(session, num_workers, remotes, env_id, logdir, modeldir, she
         ]
         for w in windows[1:]:
             cmds += ["tmux new-window -t {} -n {} {}".format(session, w, shell)]
-        cmds += ["sleep 1"]
+        cmds += ["sleep 5"]
     for window, cmd in cmds_map:
         cmds += [cmd]
 

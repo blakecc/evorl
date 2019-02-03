@@ -6,4 +6,9 @@ python train.py --num-workers 2 --env-id PongDeterministic-v3 --log-dir ~/Docume
 
 python train.py --num-workers 2 --env-id PongDeterministic-v3 --log-dir ~/Documents/temp_RL_output/181007_pong_4 --model-dir /Users/blakecuningham/Dropbox/MScDataScience/Thesis/EDEN/test_models/testmod.p
 
-python new_generation.py -m 'list_pop_20181028-N-1.json'
+
+rm -r output
+rm -r models
+rm -r __pycache__
+mkdir output
+mkdir models

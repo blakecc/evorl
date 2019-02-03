@@ -33,12 +33,12 @@ from evolution_helpers import *
 enforce_step_limit = True
 enforce_time_limit = True
 
-experiment_time_limit_secs = 1800
+experiment_time_limit_secs = 57600
 experiment_step_limit = 16000000
 
-error_time_limit_secs = 300
+error_time_limit_secs = 400
 
-total_num_generations = 3
+total_num_generations = 8
 
 # Path variables
 
@@ -73,7 +73,8 @@ def current_running_reward(log_directory):
     fail21 = (np.sum(reward_df[-50:]["ep_reward"] == -21) == 50)
 
     # alpha of 0.01 is the same as the original Karpathy metric - weights the new score as 1% towards the MA
-    return [round(reward_df["ep_reward"].ewm(alpha = 0.01).mean().tail(1).item(), 2), reward_df["step"].tail(1).item(), fail21]
+    # 0.5 is more efficient for the ultimate score, 0.9 is a good compromise
+    return [round(reward_df["ep_reward"].ewm(alpha = 0.9).mean().tail(1).item(), 2), reward_df["step"].tail(1).item(), fail21]
 
 def best_running_reward(log_directory):
 
@@ -94,7 +95,8 @@ def best_running_reward(log_directory):
     ep_reward = [(s.step, s.value) for s in acc.Scalars('global/episode_reward')]
     reward_df = pd.DataFrame(ep_reward, columns = ("step", "ep_reward"))
     # alpha of 0.01 is the same as the original Karpathy metric - weights the new score as 1% towards the MA
-    return round(reward_df["ep_reward"].ewm(alpha = 0.01).mean()[50:].max(), 2)
+    # 0.5 is more efficient, 0.9 compromise
+    return round(reward_df["ep_reward"].ewm(alpha = 0.9).mean()[50:].max(), 2)
 
 def run_experiment_chromosome_mod(model_for_experiment, log_directory_main):
 
@@ -126,11 +128,11 @@ def run_experiment_chromosome_mod(model_for_experiment, log_directory_main):
     end_experiment = False
     start_time = time.time()
 
-    # Add in 5 minute initial delay to ensure everything settles down
+    # Add in 10 minute initial delay to ensure everything settles down
     time.sleep(300)
 
     while not end_experiment:
-        time.sleep(60)
+        time.sleep(300)
         elapsed_time = time.time() - start_time
         try:
             print("Current score: " + str(current_running_reward(log_directory)[0]) + ", Time : " + str(round(elapsed_time,2)) + ", Step: " + str(round(current_running_reward(log_directory)[1])))
@@ -162,17 +164,12 @@ def run_experiment_chromosome_mod(model_for_experiment, log_directory_main):
             if (elapsed_time > error_time_limit_secs):
                 end_experiment = True
                 print("Error time limit reached")
+                print("\nERROR DETAILS:\n")
+                traceback.print_exc(file=sys.stdout)
             else:
                 # e = sys.exc_info()[0]
                 print("Potential time out - sleeping for 1 min")
                 print("\nERROR DETAILS:\n")
-                # print("Type:\n")
-                # print(sys.exc_info()[0])
-                # print("\nValue:\n")
-                # print(sys.exc_info()[1])
-                # print("\nTraceback:\n")
-                # print(sys.exc_info()[2])
-                # print("\n")
                 traceback.print_exc(file=sys.stdout)
                 time.sleep(60)
     # Kill experiment when conditions satisfied

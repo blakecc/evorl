@@ -164,8 +164,6 @@ def generate_activation_conv():
         return "elu" # linear
     elif (index == 1):
         return "leaky_relu"
-    elif (index == 1):
-        return "prelu"
     else:
         return "relu"
 
@@ -384,7 +382,7 @@ def model_output_to_pdframe(model_tested):
     reward_df = pd.DataFrame(ep_reward, columns = ('step', 'ep_reward'))
     length_df = pd.DataFrame(ep_length, columns = ('step', 'ep_length'))
     time_df = pd.DataFrame(ep_time, columns = ('step', 'ep_time'))
-    reward_df['EMA'] = reward_df['ep_reward'].ewm(alpha = 0.01).mean()
+    reward_df['EMA'] = reward_df['ep_reward'].ewm(alpha = 0.9).mean() # 0.01 from Karpathy, but 0.5 more efficient, 0.9 is a good compromise
     merged_df_1 = pd.merge(reward_df, length_df, on = ['step'])
     merged_df_2 = pd.merge(merged_df_1, time_df, on = ['step'])
 
@@ -465,6 +463,8 @@ def tournament_select_round_winner(results_frame, tournament_size):
             current_best_score = fitness
             current_best_chromo = contender
 
+
+    print("winner chromo: " + str(current_best_chromo))
     return current_best_chromo
 
 def select_tournament_winners(tournament_size, new_generation_size, population_of_models, overall_results_frame):
@@ -635,71 +635,90 @@ def mutate_learn_rate(learn_rate):
     # return round(np.max([learn_rate + (random.lognormvariate(0, 1) * learn_rate) - (np.exp(1) * learn_rate), 1e-6]), 6)
     return round(np.max([learn_rate + (random.normalvariate(0, 1) * learn_rate), 1e-6]), 6)
 
-def mutate_chromosome(chromosome, run_number):
+def mutate_chromosome(chromosome, run_number, mutate):
 
     parent_chromosome = chromosome
-    num_chromosome_layers = len(parent_chromosome[1][6])
 
-    # Decide type of layer mutation
+    if mutate == False:
 
-    if num_chromosome_layers == 1:
-        mutation_type = random.choice(['add', 'change'])
-    elif num_chromosome_layers >= 6:
-        mutation_type = random.choice(['delete', 'change'])
-    else:
-        mutation_type = random.choice(['add', 'delete', 'change'])
+        child_chromosome = copy.deepcopy(parent_chromosome)
 
-    # Apply layer mutation
+        chromodate = parent_chromosome[0].split('-')[0]
+        overallrunattempt = parent_chromosome[0].split('N-')[1].split('-')[0].split('.')[0]
 
-    if mutation_type == 'add':
-        child_chromosome = generate_chromosome_add_operator(parent_chromosome)
-    elif mutation_type == 'delete':
-        child_chromosome = generate_chromosome_delete_operator(parent_chromosome)
-    elif mutation_type == 'change':
-        child_chromosome = generate_chromosome_change_operator(parent_chromosome)
+        chromo_file_name = (chromodate +
+                            '-LR-' + str(child_chromosome[1][1]) +
+                            '-P-' + str(child_chromosome[1][2][0]) + '-O-' + str(child_chromosome[1][2][1]) +
+                            '-run-' + str(run_number) + '-N-' + str(overallrunattempt) + '.p')
 
-    # Possibly mutate learning rate
+        child_chromosome[0] = chromo_file_name
 
-    if random.random() > 0.5:
-        child_chromosome[1][1] = mutate_learn_rate(child_chromosome[1][1])
+        return child_chromosome
+
+    elif mutate == True:
+
+        num_chromosome_layers = len(parent_chromosome[1][6])
+
+        # Decide type of layer mutation
+
+        if num_chromosome_layers == 1:
+            mutation_type = random.choice(['add', 'change'])
+        elif num_chromosome_layers >= 6:
+            mutation_type = random.choice(['delete', 'change'])
+        else:
+            mutation_type = random.choice(['add', 'delete', 'change'])
+
+        # Apply layer mutation
+
+        if mutation_type == 'add':
+            child_chromosome = generate_chromosome_add_operator(parent_chromosome)
+        elif mutation_type == 'delete':
+            child_chromosome = generate_chromosome_delete_operator(parent_chromosome)
+        elif mutation_type == 'change':
+            child_chromosome = generate_chromosome_change_operator(parent_chromosome)
+
+        # Possibly mutate learning rate
+
+        if random.random() > 0.5:
+            child_chromosome[1][1] = mutate_learn_rate(child_chromosome[1][1])
 
 
-    # Add generation number (and in genesis) and somehow include run number here
-    # Do I want to inherit date and run number?
-    # Why am I not generating file name from chromosome attributes rather?
+        # Add generation number (and in genesis) and somehow include run number here
+        # Do I want to inherit date and run number?
+        # Why am I not generating file name from chromosome attributes rather?
 
-    chromodate = parent_chromosome[0].split('-')[0]
-    overallrunattempt = parent_chromosome[0].split('N-')[1].split('-')[0].split('.')[0]
+        chromodate = parent_chromosome[0].split('-')[0]
+        overallrunattempt = parent_chromosome[0].split('N-')[1].split('-')[0].split('.')[0]
 
-    chromo_file_name = (chromodate +
-                        '-LR-' + str(child_chromosome[1][1]) +
-                        '-P-' + str(child_chromosome[1][2][0]) + '-O-' + str(child_chromosome[1][2][1]) +
-                        '-run-' + str(run_number) + '-N-' + str(overallrunattempt) + '.p')
+        chromo_file_name = (chromodate +
+                            '-LR-' + str(child_chromosome[1][1]) +
+                            '-P-' + str(child_chromosome[1][2][0]) + '-O-' + str(child_chromosome[1][2][1]) +
+                            '-run-' + str(run_number) + '-N-' + str(overallrunattempt) + '.p')
 
-    child_chromosome[0] = chromo_file_name
+        child_chromosome[0] = chromo_file_name
 
-    return child_chromosome
+        return child_chromosome
 
 def create_full_new_generation(winning_parents, last_run_number):
 
-    run_number = int(last_run_number)
+    run_number = int(last_run_number) + 1
 
     new_generation_chromosomes_pt1 = []
 
     for chromo in winning_parents:
-        new_generation_chromosomes_pt1.append(mutate_chromosome(chromo, run_number))
+        new_generation_chromosomes_pt1.append(mutate_chromosome(chromo, run_number, False))
         run_number += 1
 
     new_generation_chromosomes_pt2 = []
 
     for chromo in new_generation_chromosomes_pt1:
-        new_generation_chromosomes_pt2.append(mutate_chromosome(chromo, run_number))
+        new_generation_chromosomes_pt2.append(mutate_chromosome(chromo, run_number, True))
         run_number += 1
 
     new_generation_chromosomes_pt3 = []
 
     for chromo in new_generation_chromosomes_pt2:
-        new_generation_chromosomes_pt3.append(mutate_chromosome(chromo, run_number))
+        new_generation_chromosomes_pt3.append(mutate_chromosome(chromo, run_number, True))
         run_number += 1
 
     new_generation_chromosomes = (new_generation_chromosomes_pt1 +
@@ -968,7 +987,7 @@ def new_generation_main(model_list_previous_gen, gen_number):
     for model in population_of_models:
         overall_results_frame = overall_results_frame.append(model_results_summary_for_tournament(model), ignore_index=True)
 
-    tournament_size = 3
+    tournament_size = 4
     new_generation_size = 4 # multiply this by 3 to get the actual size - winners of previous, mutation 1 and mutation 2
 
     winner_chromosomes = select_tournament_winners(tournament_size, new_generation_size, population_of_models, overall_results_frame)

@@ -1,0 +1,11 @@
+analysis/*
+csv_output/*
+models/*
+output/*
+__pycache__/
+terminal_commands.md
+181223_temptest.py
+grpc_error.md
+grpc_error.txt
+tests/
+docs/
