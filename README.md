@@ -1,5 +1,6 @@
 # Description
 
+![Overall design](images/cuningham_2_overallexperiment.png)
 
 # How to run it
 
