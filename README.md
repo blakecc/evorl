@@ -8,6 +8,13 @@ The first generation of chromosomes is created by running genesis.py, thereafter
 
 ![Overall design](images/cuningham_2_overallexperiment.png)
 
+
+## Results
+
+I will be updating this section with a blog post, and a link to the dissertation once it is graded. In brief the results were pleasing:
+* State-of-the-art beating models found
+* General insights about neural network structure for RL
+
 # How to run it
 
 Before running anything, the best thing to do is to understand the parameters you want to adjust in the code - e.g. the number of workers per A3C experiment.
@@ -15,7 +22,7 @@ Before running anything, the best thing to do is to understand the parameters yo
 The general order for running the dissertation experiment was:
 
 1. Run `genesis.py` in order to create an initial population of chromosomes. Adjust the amount of chromosomes created here.
-2. Set up your AWS spot instances. Create an AMI (see below) that you can use for these spot instances, then bulk create the number of instances needed in the AWS control panel.
+2. Set up your AWS spot instances. Create an AMI (see below) that you can use for these spot instances, then bulk create the number of instances needed in the AWS control panel. `m4.xlarge` instances were used in the experiment.
 3. Update the instance addresses and your `.pem` file in the `experiment_controller.py` file. This script will control the multiple generatios across all the instances.
 4. `python experiment_controller.py` will start the full experiment. Each instance running an A3C experiment will have an available Tensorboard that you can access from your browser if you have the right security settings on your instances. See the A3C output in an instance to check the address.
 
@@ -27,7 +34,7 @@ There are several python files in the experiment, with a system between the file
 
 ## AMI setup
 
-Getting original OpenAI agent to run was challenging - the instructions given did not work, and there were some extra modules that needed to be installed. The code in this repo has several more dependencies too, and was challenging to get working on a fresh instance. The instructions below worked, but it is possible that there might be a few more tweaks needed.
+Getting the original OpenAI agent to run was challenging - the instructions given did not work, and there were some extra modules that needed to be installed. The code in this repo has several more dependencies too, and was challenging to get working on a fresh instance. The instructions below worked, but it is possible that there might be a few more tweaks needed.
 
 After creating an instance with the "Ubuntu Deep Learning AMI v20":
 
@@ -46,6 +53,10 @@ After creating an instance with the "Ubuntu Deep Learning AMI v20":
 12. `cd evorl`
 13. `mkdir output`
 
-
-
 # Future enhancements
+
+This is a todo / wish list:
+1. Cleaner code
+2. Key variables in one place
+3. Performance improvements to get the best out of running with more workers on larger instance types
+4. More resources to run more chromosomes in more generations
